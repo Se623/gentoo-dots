@@ -1,0 +1,37 @@
+(defpoll cpuv :interval "1s" "bash ~/.config/eww/bar/scripts/cpu_usage.bash icon")
+
+(defpoll ramv :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash icon")
+
+(defpoll temp :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash icon")
+(defpoll tempv :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash icon")
+
+(defpoll wifi :interval "1s" "bash ~/.config/eww/bar/scripts/wifi.bash icon")
+(defpoll wifiv :interval "1s" "bash ~/.config/eww/bar/scripts/wifi.bash power")
+
+
+(defwidget system [] (box :orientation "v"
+			  (box :class "cpu_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+			       (label :text "")
+			       (graph :value cpuv
+				      :max 100))
+			  (box :class "mem_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+			       (label :text "")
+			       (graph :value ramv
+				      :max 100))
+			  (box :class "temp_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+			       (image :image-width 35
+				      :image-height 35
+				      :path temp)
+			       (graph :value tempv
+				      :max 100))
+			  (box :class "wifi_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+			       (image :image-width 35
+				      :image-height 35
+				      :path wifi)
+			       (graph :value wifiv
+				      :max 100))))
+
+(defwindow system :stacking "overlay" :monitor 0
+:geometry (geometry :x 1615 :y 320 :width 155 :height 155)
+(system))
+

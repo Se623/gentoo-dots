@@ -1,0 +1,60 @@
+@keyframes color-change {
+  from {
+    background: transparent;
+  }
+
+  75% {
+    background:	transparent;
+  }
+
+  to {
+   background: $btn-hover;
+  }
+
+}
+
+.module-active {
+  color: $elec-blue
+}
+
+.module-unactive {
+  color: $light-grey;
+}
+
+.control {
+  border-left-color: transparent;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.module-notes-btn {
+  border-right-color: transparent;
+  border-radius: 10px 0px 0px 10px;
+  background: $grey;
+  padding: 0.5rem;
+}
+
+.notes-btn:hover {
+  animation-duration: 1s;
+  animation-name: color-change;
+  background: $btn-hover;
+}
+
+.volbar trough highlight {
+  background: $purple;
+  border-radius: 5px;
+}
+
+@each $color in red, yellow, green {
+  .batbar-#{$color} trough highlight {
+    @if $color == green {
+      background: $green;
+    }
+    @if	$color == yellow {
+      background: $yellow;
+    }
+    @if	$color == red	{
+      background: $red;
+    }
+    border-radius: 5px;
+  }
+}

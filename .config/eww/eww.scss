@@ -1,0 +1,14 @@
+* { 
+  all: unset;
+  font-family: jetbrains mono nerdfont;
+}
+
+
+@import "./scss/colors.scss";
+@import "./scss/fonts.scss";
+@import "./scss/styles.scss";
+
+
+@import "./notes/notes.scss";
+@import "./bar/bar.scss";
+@import "./dashboard/dashboard.scss";

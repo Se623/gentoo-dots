@@ -1,0 +1,27 @@
+;; Volume Widgets ;;
+
+(defpoll volume :interval "1s" "bash ~/.config/eww/bar/scripts/volume.bash icon")
+(defpoll current-volume :interval "1s"  "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defvar volum false)
+
+(defwidget volum []
+        (eventbox
+                        :onhover "eww update volum=true"                
+                        :onhoverlost "eww update volum=false"
+                        (box    :orientation "h"        
+                                :space-evenly "false"
+                                :spacing "2"
+                                (image  :path volume
+                                        :image-width 35
+                                        :image-height 35
+                                        :tooltip "Volume: ${current-volume}%")
+                                (revealer  :transition "slideright"
+                                           :reveal volum
+                                           :duration "550ms"
+                                           (scale :class "volbar"       
+                                                  :value current-volume
+                                                  :orientation "h"
+                                                  :tooltip "Volume: ${current-volume}%"
+                                                  :max 101
+                                                  :min 0
+                                                  :onchange "amixer -D pulse sset Master {}%" )))))

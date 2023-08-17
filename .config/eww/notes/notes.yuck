@@ -1,0 +1,35 @@
+
+(defwidget notes-body []
+	(box :class "notes-body"
+	     :space-evenly false 
+	     :halign "fill"
+	     :orientation "v"
+	     (label :class "h1"
+		    :text "Notifications")
+	     (button :class "test")
+	     (box :class "line"
+		  :halign "center"
+		  :height 2
+		  :width 500)))
+
+(defwidget notes [] 
+	(revealer  :transition "slideup"
+                   :reveal noti ;; Noti - for connecting to bar, see bar.yuck
+                   :duration "550ms"
+	           :valign "end"
+		   :class "test"
+		   (notes-body)))
+
+(defvar noti true)
+
+(defwindow notes
+     :monitor 0
+     :geometry (geometry :x "1%"
+                         :y "0%"
+			 :width "30%"
+                         :height "100%"
+			 :anchor "right bottom")
+     :stacking "fg"
+     :active false
+     :exclusive false
+     (notes))

@@ -1,0 +1,4 @@
+;; Workspaces widget ;;
+
+(defwidget workspaces []
+        (box :class "module module-active"))

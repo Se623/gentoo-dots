@@ -1,0 +1,31 @@
+#!/bin/bash
+
+icons=$HOME/.config/eww/bar/icons/updates
+# quantity=$(emerge -pvuND --with-bdeps=y world | grep "Total" | grep -oE "[0-9]+ packages" | grep -oE "[0-9]+")
+quantity="48877"
+
+total() {
+total="$quantity pending updates"
+echo "$total"
+}
+
+status() {
+
+if [ "$quantity" == "" ]; then
+  status="false"
+else
+  status="true"
+fi
+echo "$status"
+}
+
+icon() {
+icon=${icons}/updates.svg
+sed -i "s/.st0{fill:none;stroke:#[A-F0-9]*;/.st0{fill:none;stroke:#7DF9FF;/" $icon
+echo "$icon"
+}
+
+[ "$1" = "total" ] && total && exit
+[ "$1" = "status" ] && status && exit
+[ "$1" = "icon" ] && icon && exit
+exit

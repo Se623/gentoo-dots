@@ -1,0 +1,39 @@
+(defpoll ram :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash icon")
+(defpoll ram_usage :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash usage")
+(defpoll usage_mem :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash usage_mem")
+(defpoll usage_swap :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash usage_swap")
+(defvar ram_slider false)
+
+(defwidget ram []
+        (box :class "module module-active"
+             :hexpand false
+             :space-evenly false
+             :spacing 5
+             (image :path ram
+                    :image-width 35
+                    :image-height 35)
+             (eventbox :onhover "eww update ram_slider=true"
+                       :onhoverlost "eww update ram_slider=false"
+                       (box :orientation "v"
+                            :space-evenly false
+                            (revealer :reveal "${!ram_slider}"
+                                      :transition "slidedown"
+                                      :halign "end"
+                                      (box :orientation "h"
+                                           :space-evenly false
+                                           :height 40
+                                           (label :text "${ram_usage}"
+                                                  :valign "center")))
+                            (revealer :reveal ram_slider
+                                      :transition "slideup"
+                                      (box :orientation "h"
+                                           :space-evenly false
+                                           :height 40
+                                           :spacing 5
+                                           (scale :max 101
+                                                  :min 0
+                                                  :value usage_mem)
+                                           (scale :max 101
+                                                  :min 0
+                                                  :value usage_swap)))))))
+

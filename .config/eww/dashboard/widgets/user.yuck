@@ -1,0 +1,22 @@
+;; User widget ;;
+
+(defvar name "Name")
+(defpoll user :interval "1s" "whoami")
+
+(defwidget user []
+	(box :orientation "v"
+	     :class "module"
+	     (box)
+	     (label :class ""
+		    :text "Name")
+	     (label :class ""
+		    :text user)))
+
+(defwindow user
+     :monitor 0
+     :geometry (geometry :x "30%"
+                         :y "30%"
+                         :width "250px"
+                         :height "300px")
+     :stacking "overlay"
+     (user))

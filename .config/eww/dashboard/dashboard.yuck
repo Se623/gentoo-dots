@@ -1,0 +1,16 @@
+(include "./dashboard/widgets/user.yuck")
+;; (include "./dashboard/widgets/stats.yuck")
+(include "./dashboard/widgets/power.yuck")
+
+(defwidget bg []
+  (box :class "bg"))
+
+(defwindow dashboard
+     :monitor 0
+     :geometry (geometry :x "0px"
+                         :y "0px"
+                         :width "100%"
+                         :height "100%"
+                         :anchor "center")
+     :stacking "fg"
+     (bg))

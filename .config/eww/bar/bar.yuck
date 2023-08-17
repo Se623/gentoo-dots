@@ -1,0 +1,47 @@
+;; Importing components ;;
+(include "./widgets/notes.yuck")
+(include "./widgets/notes.yuck")
+(include "./widgets/notes.yuck")
+(include "./widgets/notes.yuck")
+(include "./widgets/notes.yuck")
+(include "./widgets/notes.yuck")
+(include "./widgets/notes.yuck")
+(include "./widgets/notes.yuck")
+(include "./widgets/notes.yuck")
+
+
+(defwidget control []
+        (box :class "module module-active control"
+             :space-evenly "false"
+             :spacing 5
+             (bat)
+             (volum)))
+
+;; Building this whole thing ;;
+
+(defwidget bar []
+    (centerbox :style "background: transparent;"
+        (box :class "left" :halign "start" :hexpand false :vexpand false :space-evenly false :spacing 10
+	    (box :spacing 0 
+		 :space-evenly false
+		 (notes-btn)
+                 (control))
+	    (updates))
+        (box :class "center" :halign "start" :hexpand false :vexpand false 
+            (time))
+        (box :class "right" :halign "end" :hexpand false :vexpand false :space-evenly false :spacing 10
+            (cpu)
+	    (ram)
+	    (workspaces))))
+
+
+(defwindow bar
+     :monitor 0
+     :geometry (geometry :x "0px"
+                         :y "1%"
+                         :width "99%"
+                         :height "40"
+	                 :anchor "top center")
+     :stacking "bg"
+     :exclusive true
+     (bar))

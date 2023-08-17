@@ -1,0 +1,28 @@
+;; Battery Widget ;;
+
+(defpoll battery :interval "1s" "bash ~/.config/eww/bar/scripts/battery.bash icon")
+(defpoll battery-cappacity :interval "1s"  "bash ~/.config/eww/bar/scripts/battery.bash percent")
+(defpoll battery-color :interval "1s" "bash ~/.config/eww/bar/scripts/battery.bash color")
+(defvar	bat false)
+
+(defwidget bat []
+        (eventbox
+                        :onhover "eww update bat=true"
+                        :onhoverlost "eww update bat=false"
+                        (box    :orientation "h"
+                                :space-evenly "false"
+                                :spacing "2"
+                                (image  :path battery
+                                        :image-width 35
+                                        :image-height 35
+                                        :tooltip "Battery: ${battery-cappacity}%")
+                                (revealer  :transition "slideright"
+                                           :reveal bat
+                                           :duration "550ms"
+                                           (scale :class "batbar-${battery-color}"
+                                                  :min 0
+                                                  :max 101
+                                                  :active false
+                                                  :tooltip "Battery: ${battery-cappacity}%"
+                                                  :value battery-cappacity
+                                                  :onchange "")))))

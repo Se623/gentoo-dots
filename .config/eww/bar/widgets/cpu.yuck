@@ -1,0 +1,37 @@
+;; Cpu usage widget ;;
+
+(defpoll cpu :interval "1s" "bash ~/.config/eww/bar/scripts/cpu_usage.bash icon")
+(deflisten cpu_usage :initial "0.00" "bash ~/.config/eww/bar/scripts/cpu_usage.bash usage")
+(defvar cpu_slider false)
+
+(defwidget cpu []
+        (box :class "module module-active"
+             :hexpand false
+             :space-evenly false
+             :spacing 5
+             (image :path cpu
+                    :image-width 35
+                    :image-height 35)
+             (eventbox :onhover "eww update cpu_slider=true"
+                       :onhoverlost "eww update cpu_slider=false"
+                       (box :orientation "v"
+                            :space-evenly false
+                            (revealer :reveal "${!cpu_slider}"
+                                      :transition "slidedown"
+                                      :halign "end"
+                                      (box :orientation "h"
+                                           :space-evenly false
+                                           :height 40
+                                           (label :text "${cpu_usage}%"
+                                                  :valign "center")))
+                            (revealer :reveal cpu_slider
+                                      :transition "slideup"
+                                      (box :orientation "h"
+                                           :space-evenly false
+                                           :height 40
+                                           (scale :max 101
+                                                  :min 0
+                                                  :value cpu_usage
+                                                  :valign "center")))))))
+
+

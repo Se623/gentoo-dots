@@ -1,0 +1,33 @@
+(defwidget logout [] 
+	(box :class "module" :vexpand "false" :hexpand "false" 
+		(button :class "icon fs-xxl" :onclick "hyprctl dispatch exit" "\\ue904")))
+(defwidget sleep [] 
+	(box :class "module" :vexpand "false" :hexpand "false" 
+		(button :class "icon fs-xxl" :onclick "loginctl suspend" "\\ue907")))
+(defwidget reboot [] 
+	(box :class "module" :vexpand "false" :hexpand "false" 
+		(button :class "icon fs-xxl" :onclick "loginctl reboot" "\\ue906")))
+(defwidget poweroff [] 
+	(box :class "module" :vexpand "false" :hexpand "false" 
+		(button :class "fs-xxl" :onclick "loginctl poweroff" 
+			(label :style "font-family: icomoon;" :text "\\ue905"))))
+
+;; logout
+(defwindow logout :stacking "overlay" :monitor 0 
+	    :geometry (geometry :x 1445 :y 150 :width 155 :height 155)
+					(logout))
+
+;; sleep
+(defwindow sleep :stacking "overlay" :monitor 0 
+	    :geometry (geometry :x 1615 :y 150 :width 155 :height 155)
+					(sleep))
+
+;; reboot
+(defwindow reboot :stacking "overlay" :monitor 0 
+	    :geometry (geometry :x 1445 :y 320 :width 155 :height 155)
+					(reboot))
+
+;; poweroff
+(defwindow poweroff :stacking "overlay" :monitor 0 
+	    :geometry (geometry :x 1615 :y 320 :width 155 :height 155)
+					(poweroff))
