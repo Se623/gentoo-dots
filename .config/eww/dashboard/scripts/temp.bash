@@ -7,6 +7,6 @@ if [ "$1" == "temp" ]; then
 elif [ "$1" == "max" ]; then
     echo "$max"
 elif [ "$1" == "icon" ]; then
-    sed -i "s/.st1{fill:none;stroke:#[A-F0-9]*;/.st1{fill:none;stroke:#7DF9FF;/" $home/.config/eww/bar/icons/temp/temp.svg
-    echo "$home/.config/eww/bar/icons/temp/temp.svg"
-
+    sed -i "s/.st1{fill:none;stroke:#[A-F0-9]*;/.st1{fill:none;stroke:#7DF9FF;/" $home/.config/eww/icons/temp/temp.svg
+    echo "$home/.config/eww/icons/temp/temp.svg"
+fi

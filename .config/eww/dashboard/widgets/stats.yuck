@@ -1,11 +1,11 @@
-(defpoll cpuv :interval "1s" "bash ~/.config/eww/bar/scripts/cpu_usage.bash icon")
+(defpoll cpuv :interval "1s" "bash ~/.config/eww/bar/scripts/cpu_usage.bash")
 
 (defpoll ramv :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash icon")
-(defpoll ramm :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash icon")
+(defpoll ramm :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash max")
 
 (defpoll temp :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash icon")
-(defpoll tempv :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash icon")
-(defpoll tempm :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash icon")
+(defpoll tempv :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash temp")
+(defpoll tempm :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash max")
 
 (defpoll wifi :interval "1s" "bash ~/.config/eww/bar/scripts/wifi.bash icon")
 (defpoll wifiv :interval "1s" "bash ~/.config/eww/bar/scripts/wifi.bash power")

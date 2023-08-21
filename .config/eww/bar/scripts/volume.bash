@@ -6,11 +6,11 @@ mute=$(pactl list sinks | grep "Mute" | grep -Eo "(yes|no)")
 
 if [ "$1" == "icon" ]; then
     if [ "$vol" -gt "66" ]; then
-	echo ""
+	echo "//e90e"
     elif [ "$vol" -gt "33" ]; then
-	echo ""
+	echo "//e909"
     elif [ "$vol" -gt "0" ]; then
-	echo ""
+	echo "//e90f"
     fi
 if [ "$1" == "percent" ]; then
     echo "$vol"

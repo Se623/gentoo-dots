@@ -1,5 +1,5 @@
 (include "./dashboard/widgets/user.yuck")
-;; (include "./dashboard/widgets/stats.yuck")
+(include "./dashboard/widgets/stats.yuck")
 (include "./dashboard/widgets/power.yuck")
 
 (defwidget bg []
