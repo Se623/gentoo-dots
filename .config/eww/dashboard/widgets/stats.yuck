@@ -1,7 +1,7 @@
-(defpoll cpuv :interval "1s" "bash ~/.config/eww/bar/scripts/cpu_usage.bash")
+(defpoll cpuv :interval "1s" "bash ~/.config/eww/bar/scripts/usage.bash cpu")
 
-(defpoll ramv :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash icon")
-(defpoll ramm :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash max")
+(defpoll ramv :interval "1s" "bash ~/.config/eww/bar/scripts/usage.bash ram")
+(defpoll ramm :interval "1s" "bash ~/.config/eww/bar/scripts/usage.bash ram-total")
 
 (defpoll temp :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash icon")
 (defpoll tempv :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash temp")
@@ -14,11 +14,11 @@
 
 (defwidget system [] (box :orientation "v"
 			  (box :class "cpu_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-			       (label :text "")
+			       (label :text "\\ue900")
 			       (graph :value cpuv
 				      :max 100))
 			  (box :class "mem_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-			       (label :text "")
+			       (label :text "\\ue901")
 			       (graph :value ramv
 				      :max ramm))
 			  (box :class "temp_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
@@ -28,9 +28,7 @@
 			       (graph :value tempv
 				      :max tempm))
 			  (box :class "wifi_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-			       (image :image-width 35
-				      :image-height 35
-				      :path wifi)
+			       (label :text wifi)
 			       (graph :value wifiv
 				      :max wifim))))
 

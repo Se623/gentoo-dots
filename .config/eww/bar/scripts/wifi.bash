@@ -22,15 +22,15 @@ elif [ "$1" == "power" ]; then
 elif [ "$1" == "icon" ]; then
     if [ "$power" == "" ]; then
         if [ $connect == *"Wired"* ]; then
-            echo "\ue91b"
+            echo "\\ue91b"
         else
-            echo "\ue91c"
+            echo "\\ue91c"
         fi
     elif [ "$power" -gt "66" ]; then
-        echo "\ue921"
+        echo "\\ue922"
     elif [ "$power" -gt "33" ]; then
-       	echo "\ue91d"
+       	echo "\\ue91d"
     elif [ "$power" -gt "0" ]; then
-       	echo "\ue922"
+       	echo "\\ue921"
     fi
 fi
