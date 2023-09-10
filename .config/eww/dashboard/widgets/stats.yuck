@@ -13,24 +13,62 @@
 
 
 (defwidget system [] (box :orientation "v"
+			  :class "module"
 			  (box :class "cpu_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-			       (label :text "\\ue900")
-			       (graph :value cpuv
-				      :max 100))
+			       (label :class "icon-small"
+				      :text "\\ue900")
+			       (box :valign "center"
+				    :class "graph"
+				    (graph :thickness 3
+					   :value cpuv
+					   :width 100
+					   :time-range "20s"
+					   :min 0
+					   :max 100
+					   :dynamic "true"
+					   :line-style "round")))
+			  
 			  (box :class "mem_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-			       (label :text "\\ue901")
-			       (graph :value ramv
-				      :max ramm))
+			       (label :class "icon-small"
+				      :text "\\ue901")
+			       (box :valign "center"
+				    :class "graph"
+				    (graph :thickness 3
+					   :value ramv
+					   :width 100
+					   :time-range "20s"
+					   :min 0
+					   :max ramm
+					   :dynamic "true"
+					   :line-style "round")))
 			  (box :class "temp_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-			       (image :image-width 35
+			       (image :image-width 30
 				      :image-height 35
 				      :path temp)
-			       (graph :value tempv
-				      :max tempm))
+			       (box :valign "center"
+				    :class "graph"
+				    (graph :thickness 3
+					   :value tempv
+					   :width 100
+					   :time-range "20s"
+					   :min 0
+					   :max tempm
+					   :dynamic "true"
+					   :line-style "round")))
+		       
 			  (box :class "wifi_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-			       (label :text wifi)
-			       (graph :value wifiv
-				      :max wifim))))
+			       (label :class "icon-small"
+				      :text wifi)
+			       (box :valign "center"
+				    :class "graph"
+				    (graph :thickness 3
+					   :value wifiv
+					   :width 100
+					   :time-range "20s"
+					   :min 0
+					   :max wifim
+					   :dynamic "true"
+					   :line-style "round")))))
 
 (defwindow system :stacking "overlay" :monitor 0
 :geometry (geometry :x 1615 :y 320 :width 155 :height 155)

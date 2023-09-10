@@ -27,7 +27,7 @@ elif [ "$1" == "icon" ]; then
             echo "\\ue91c"
         fi
     elif [ "$power" -gt "66" ]; then
-        echo "\\ue922"
+        echo "\\ue922\\ue91e"
     elif [ "$power" -gt "33" ]; then
        	echo "\\ue91d"
     elif [ "$power" -gt "0" ]; then
