@@ -1,14 +1,64 @@
+$background: #1A1B26;
+$foreground: #A9B1D6;
+
+$red: #E05C4B;
+$green: #33FF93;
+$light-grey: #D9D9D9;
+$grey: #1F232B;
+$yellow: #F9B458;
+$purple: #9900FF;
+$elec-blue: #7DF9FF;
+$white: $foreground;
+
+$btn-hover: rgba(150, 150, 150, 0.52);
+
 * { 
   all: unset;
   font-family: jetbrains mono nerdfont;
 }
 
+.icon {
+    font-size: 30px;
+    font-family: icomoon;
+}
 
-@import "./scss/colors.scss";
-@import "./scss/fonts.scss";
-@import "./scss/styles.scss";
+.icon-small {
+    font-size: 30px;
+    font-family: icomoon;
+}
 
+.test {
+    background: $red;
+}
 
-@import "./notes/notes.scss";
-@import "./bar/bar.scss";
-@import "./dashboard/dashboard.scss";
+.module {
+    background: $background;
+    border-radius: 10px;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+}
+
+tooltip {
+    background: $background;
+    border-radius: 5px;
+    padding: 0 2000px;
+}
+
+scale trough {
+    background: black;
+    border-radius: 5px;
+    min-height: 10px;
+    min-width: 80px;
+    border-color: transparent;
+    highlight {
+        background: $elec-blue;
+        border-radius: 5px;
+    }
+}
+
+.graph {
+    border-radius: 5px;
+    background-color: black;
+    min-height: 32px;
+    border: solid 2px grey;
+    color: purple;
+}
