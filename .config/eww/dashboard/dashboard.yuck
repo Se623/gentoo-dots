@@ -1,6 +1,7 @@
 (include "./dashboard/widgets/user.yuck")
 (include "./dashboard/widgets/stats.yuck")
 (include "./dashboard/widgets/power.yuck")
+(include "./dashboard/widgets/weather.yuck")
 
 (defwidget bg []
   (box :class "bg"))
