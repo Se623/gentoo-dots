@@ -16,7 +16,7 @@
 			  :class "module"
 			  (box :class "cpu_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
 			       (label :class "icon-small"
-				      :text "\\ue900")
+				      :text "\\ue919\\u030C")
 			       (box :valign "center"
 				    :class "graph"
 				    (graph :thickness 3
@@ -71,6 +71,6 @@
 					   :line-style "round")))))
 
 (defwindow system :stacking "overlay" :monitor 0
-:geometry (geometry :x 1615 :y 320 :width 155 :height 155)
+:geometry (geometry :x 300 :y 320 :width 155 :height 155)
 (system))
 

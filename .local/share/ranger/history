@@ -1,5 +1,3 @@
-touch dashboard.yuck
-touch dashboard.scss
 touch notif-btn.yuck
 touch battery.yuck
 touch volume.yuck
@@ -38,7 +36,6 @@ shell eww open logout
 touch 
 mkdir scripts
 touch temp.bash
-open_with 2
 rename .config
 rename config
 open_with 
@@ -48,3 +45,6 @@ rename icon-font
 rename icon-font.tff
 open_with 0
 delete
+open_with 2
+mkdir components
+mkdir backgrounds

@@ -233,4 +233,24 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="file:///home/se623/gentoo-dots/sddm-theme/backgrounds/cliffside.png" added="2023-09-20T15:58:40.897794Z" modified="2023-09-20T15:58:41.267654Z" visited="2023-09-20T15:58:40.897797Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-09-20T15:58:41.267628Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/se623/Downloads/sddm-theme-corners-main.zip" added="2023-09-20T16:19:35.370524Z" modified="2023-09-20T16:19:35.370532Z" visited="2023-09-20T16:19:35.370525Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-09-20T16:19:35.370528Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>

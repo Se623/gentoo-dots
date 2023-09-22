@@ -18,17 +18,13 @@ $btn-hover: rgba(150, 150, 150, 0.52);
 }
 
 .icon {
-    font-size: 30px;
+    font-size: 50px;
     font-family: icomoon;
 }
 
 .icon-small {
     font-size: 30px;
     font-family: icomoon;
-}
-
-.test {
-    background: $red;
 }
 
 .module {
@@ -41,18 +37,6 @@ tooltip {
     background: $background;
     border-radius: 5px;
     padding: 0 2000px;
-}
-
-scale trough {
-    background: black;
-    border-radius: 5px;
-    min-height: 10px;
-    min-width: 80px;
-    border-color: transparent;
-    highlight {
-        background: $elec-blue;
-        border-radius: 5px;
-    }
 }
 
 .graph {
