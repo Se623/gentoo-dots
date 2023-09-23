@@ -1,2 +1,2 @@
 # gentoo-dots
-My gentoo dotfiles!
+My gentoo dotfiles! (alpha)
