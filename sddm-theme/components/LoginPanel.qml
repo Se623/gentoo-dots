@@ -8,173 +8,200 @@ Item {
     property var session: sessionPanel.session
     property var inputHeight: Screen.height * config.UIScale * 0.25
     property var inputWidth: Screen.width * config.UIScale
+    property var pos: "logincard" 
 
-    Column {
-        spacing: 8
+    Rectangle {
+	id: loginCard
+	color: "#55000000"
+	height: 500
+	width: 600
+	y: root.height 
+	x: root.width / 3
+
+
+	SessionPanel {
+	    id: sessionPanel
+	}
+
+	LoginContent {
+	    id: loginContent
+	    anchors {
+		horizontalCenter: parent.horizontalCenter
+		verticalCenter: parent.verticalCenter
+	    }
+	}
+
+	
+	focus: true
+
+	Keys.onUpPressed: [
+	    loginCard.state = "up"
+	]
+
+	states: [
+	    State {
+		name: "up"; 
+		PropertyChanges {
+		    target: loginCard
+		    y: root.height / 4
+		}},
+	    State {
+		 name: "cen"; 
+		 PropertyChanges {
+		     target: loginCard
+		     x: root.width / 3
+		 }},
+	    State {
+		name: "left"; 
+		PropertyChanges {
+		    target: loginCard
+		    x: -root.width
+		}},
+	    State {
+		name: "right"; 
+		PropertyChanges {
+		    target: loginCard
+		    x: root.width
+		}}
+	    
+	 ]
+
+	 transitions: [
+	     Transition {
+		 from: "*"; to: "up";
+		 NumberAnimation { properties: "y"; duration: 500; easing.type: Easing.InOutQuad }
+	     },
+	     Transition {
+		 from: "*"; to: "cen";
+		 NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InOutQuad }
+	     },
+	     Transition {
+		 from: "*"; to: "left";
+		 NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InOutQuad }
+	     },
+	     Transition {
+		 from: "*"; to: "right";
+		 NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InOutQuad }
+	     }
+	 ]
+	
+    }
+	
+     Rectangle {
+	 id: loginCardO
+	 color: "#55000000"
+	 height: 500
+	 width: 600
+	 x: -root.width
+	 y: root.height / 4
+
+	 LoginContent {
+	    id: loginContentO
+	    anchors {
+		horizontalCenter: parent.horizontalCenter
+		verticalCenter: parent.verticalCenter
+	    }
+	 }
+
+	 states: [
+	     State {
+		 name: "cenO"; 
+		 PropertyChanges {
+		     target: loginCardO 
+		     x: root.width / 3
+		 }},
+	     State {
+		 name: "leftO"; 
+		 PropertyChanges {
+		     target: loginCardO 
+		     x: -root.width
+		 }},
+	     State {
+		 name: "rightO"; 
+		 PropertyChanges {
+		     target: loginCardO
+		     x: root.width
+		 }}
+
+	 ]
+
+	 transitions: [
+	     Transition {
+		 from: "*"; to: "cenO"; 
+		 NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InOutQuad }
+	     },
+	     Transition {
+		 from: "*"; to: "leftO"; 
+		 NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InOutQuad }
+	     },
+	     Transition {
+		 from: "*"; to: "rightO"; 
+		 NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InOutQuad }
+	     }
+	 ]
+
+     }
+    
+    Rectangle {
+	height: 50
+	width: 20
+	x: Screen.width - 200
 	
 	anchors {
-	    horizontalCenter: parent.horizontalCenter
-	    verticalCenter: paernt.verticalCenter
+	    verticalCenter: parent.verticalCenter 
+	
 	}
-
-        PowerPanel {
-            id: powerPanel
-        }
-
-        SessionPanel {
-            id: sessionPanel
-        }
-
-    }
-
-    Column {
-        spacing: 8
-        width: inputWidth
-
-	anchors	{
-	   horizontalCenter: parent.horizontalCenter 
-            verticalCenter: paernt.verticalCenter
+	MouseArea {  
+	    anchors.fill: parent
+	    onClicked: {
+		loginCardO.x = pos == "logincard" ? -root.width : loginCardO.x;
+		loginCard.x = pos == "logincardo" ? -root.width : loginCard.x;
+		loginCardO.state = pos == "logincardo" ? "rightO" : loginCardO.state; 
+		loginCard.state = pos == "logincard" ? "right" : loginCard.state; 
+		loginCardO.state = pos == "logincard" ? "cenO" : loginCardO.state; 
+		loginCard.state =  pos == "logincardo" ? "cen" : loginCard.state;
+		loginCard.y = root.height / 4
+		pos = pos == "logincard" ? "logincardo" : "logincard"
+	    }
 	}
-
-        UserPanel {
-            id: userPanel
-        }
-
-        PasswordPanel {
-            id: passwordField
-
-            height: inputHeight
-            width: parent.width
-            onAccepted: loginButton.clicked()
-        }
-
-        Button {
-            id: loginButton
-
-            height: inputHeight
-            width: parent.width
-            enabled: user != "" && password != "" ? true : false
-            hoverEnabled: true
-            text: "Login!!"
-            onClicked: {
-                sddm.login(user, password, session);
-            }
-            states: [
-                State {
-                    name: "pressed"
-                    when: loginButton.down
-
-                    PropertyChanges {
-                        target: buttonBackground
-                        color: Qt.darker(config.LoginButtonBg, 1.4)
-                        opacity: 1
-                    }
-
-                    PropertyChanges {
-                        target: buttonText
-                        opacity: 1
-                    }
-
-                },
-                State {
-                    name: "hovered"
-                    when: loginButton.hovered
-
-                    PropertyChanges {
-                        target: buttonBackground
-                        color: Qt.darker(config.LoginButtonBg, 1.2)
-                        opacity: 1
-                    }
-
-                    PropertyChanges {
-                        target: buttonText
-                        opacity: 1
-                    }
-
-                },
-                State {
-                    name: "enabled"
-                    when: loginButton.enabled
-
-                    PropertyChanges {
-                        target: buttonBackground
-                        opacity: 1
-                    }
-
-                    PropertyChanges {
-                        target: buttonText
-                        opacity: 1
-                    }
-
-                }
-            ]
-
-            Rectangle {
-                id: loginAnim
-
-                radius: parent.width / 2
-                anchors.centerIn: loginButton
-                color: "black"
-                opacity: 1
-
-                NumberAnimation {
-                    id: coverScreen
-
-                    target: loginAnim
-                    properties: "height, width"
-                    from: 0
-                    to: root.width * 2
-                    duration: 1000
-                    easing.type: Easing.InExpo
-                }
-
-            }
-
-            contentItem: Text {
-                id: buttonText
-
-                renderType: Text.NativeRendering
-                font.family: config.Font
-                font.pointSize: config.FontSize
-                font.bold: true
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                color: config.LoginButtonTextColor
-                opacity: 0.5
-                text: config.LoginButtonText
-            }
-
-            background: Rectangle {
-                id: buttonBackground
-
-                color: config.LoginButtonBg
-                opacity: 0.5
-                radius: config.Radius
-            }
-
-            transitions: Transition {
-                PropertyAnimation {
-                    properties: "color, opacity"
-                    duration: 150
-                }
-
-            }
-
-        }
-
     }
-
+    
+    Rectangle {
+	height: 50
+	width: 20
+	x: 50
+	
+	anchors {
+	    verticalCenter: parent.verticalCenter 
+	    
+	}
+	MouseArea {
+	    anchors.fill: parent
+	    onClicked: {
+		loginCardO.x = pos == "logincard" ? root.width : loginCardO.x;
+		loginCard.x = pos == "logincardo" ? root.width : loginCard.x;
+		loginCardO.state = pos == "logincardo" ? "leftO" : loginCardO.state; 
+		loginCard.state = pos == "logincard" ? "left" : loginCard.state; 
+		loginCardO.state = pos == "logincard" ? "cenO" : loginCardO.state; 
+		loginCard.state =  pos == "logincardo" ? "cen" : loginCard.state;
+		loginCard.y = root.height / 4
+		pos = pos == "logincard" ? "logincardo" : "logincard"
+	    }
+	}
+	
+    }
+    
+    
     Connections {
         function onLoginSucceeded() {
             coverScreen.start();
         }
-
+	
         function onLoginFailed() {
             passwordField.text = "";
             passwordField.focus = true;
         }
-
+	
         target: sddm
     }
-
 }

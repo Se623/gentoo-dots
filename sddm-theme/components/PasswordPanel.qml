@@ -4,7 +4,7 @@ import QtQuick.Controls 2.12
 TextField {
     id: passwordField
 
-    focus: true
+    focus: false
     selectByMouse: true
     placeholderText: config.PassFieldBgText
     echoMode: TextInput.Password

@@ -75,7 +75,7 @@ Column {
 
     Popup {
         id: userPopup
-
+	
         width: inputWidth
         padding: 15
 
@@ -127,8 +127,8 @@ Column {
 
         }
 
-    }
-
+   }
+    
     Item {
         width: inputWidth
         implicitHeight: pictureBorder.height
@@ -143,68 +143,6 @@ Column {
             border.width: config.UAPBorderWidth
             border.color: config.UAPBorderColor
             color: config.UAPColor
-            states: [
-                State {
-                    name: "pressed"
-
-                    PropertyChanges {
-                        target: pictureBorder
-                        border.color: Qt.darker(config.UAPBorderColor, 1.2)
-                        color: Qt.darker(config.UAPColor, 1.2)
-                    }
-
-                },
-                State {
-                    name: "hovered"
-
-                    PropertyChanges {
-                        target: pictureBorder
-                        border.color: Qt.darker(config.UAPBorderColor, 1.4)
-                        color: Qt.darker(config.UAPColor, 1.4)
-                    }
-
-                },
-                State {
-                    name: "unhovered"
-
-                    PropertyChanges {
-                        target: pictureBorder
-                        border.color: config.UAPBorderColor
-                        color: config.UAPColor
-                    }
-
-                }
-            ]
-
-            MouseArea {
-                id: roundMouseArea
-
-                anchors.fill: parent
-                hoverEnabled: true
-                onClicked: userPopup.open()
-                onHoveredChanged: {
-                    if (containsMouse)
-                        pictureBorder.state = "hovered";
-                    else
-                        pictureBorder.state = "unhovered";
-                }
-                onPressedChanged: {
-                    if (containsPress)
-                        pictureBorder.state = "pressed";
-                    else if (containsMouse)
-                        pictureBorder.state = "hovered";
-                    else
-                        pictureBorder.state = "unhovered";
-                }
-            }
-
-            transitions: Transition {
-                PropertyAnimation {
-                    properties: "border.color, color"
-                    duration: 150
-                }
-
-            }
 
         }
 
