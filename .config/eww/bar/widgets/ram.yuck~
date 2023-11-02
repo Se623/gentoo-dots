@@ -1,7 +1,6 @@
-(defpoll ram :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash icon")
-(defpoll ram_usage :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash usage")
-(defpoll usage_mem :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash usage_mem")
-(defpoll usage_swap :interval "1s" "bash ~/.config/eww/bar/scripts/ram_usage.bash usage_swap")
+
+(defpoll ram_usage :interval "1s" "bash ~/.config/eww/bar/scripts/usage.bash ram")
+(defpoll ram_total :interval "1s" "bash ~/.config/eww/bar/scripts/usage.bash ram-total")
 (defvar ram_slider false)
 
 (defwidget ram []
@@ -9,11 +8,11 @@
              :hexpand false
              :space-evenly false
              :spacing 5
-             (image :path ram
-                    :image-width 35
-                    :image-height 35)
+             (label :class "icon-small"
+		    :text "\\ue92e")
              (eventbox :onhover "eww update ram_slider=true"
                        :onhoverlost "eww update ram_slider=false"
+		       :tooltip "RAM usage"
                        (box :orientation "v"
                             :space-evenly false
                             (revealer :reveal "${!ram_slider}"
@@ -30,10 +29,7 @@
                                            :space-evenly false
                                            :height 40
                                            :spacing 5
-                                           (scale :max 101
+                                           (scale :max ram_total
                                                   :min 0
-                                                  :value usage_mem)
-                                           (scale :max 101
-                                                  :min 0
-                                                  :value usage_swap)))))))
+                                                  :value ram_usage)))))))
 

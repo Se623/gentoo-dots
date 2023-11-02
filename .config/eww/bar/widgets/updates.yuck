@@ -15,9 +15,8 @@
                        (eventbox :onhover "eww update update-text=true"
                                  :onhoverlost "eww update update-text=false"
                                  (box :space-evenly "false"
-                                      (image :path updates
-                                             :image-width 35
-                                             :image-height 35)
+                                      (label :class "icon-small"
+                                             :text "\\ue926")
                                              (revealer  :transition "slideright"
                                                         :reveal update-text
                                                         :duration "700ms"

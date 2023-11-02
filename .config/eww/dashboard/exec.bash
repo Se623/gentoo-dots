@@ -11,7 +11,8 @@ run_eww() {
 		   sleep \
 		   reboot \
 		   poweroff \
-		   user
+		   user \
+		   dashboard
 }
 
 ## Launch or close widgets accordingly
@@ -21,7 +22,7 @@ if [[ ! -f "$FILE" ]]; then
 else
 	${EWW} close \
 	       system weather \
-	       logout sleep reboot poweroff user
+	       logout sleep reboot poweroff user dashboard
 	rm "$FILE"
 fi
 

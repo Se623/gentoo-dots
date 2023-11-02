@@ -7,7 +7,8 @@
 (defpoll tempv :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash temp")
 (defpoll tempm :interval "1s" "bash ~/.config/eww/dashboard/scripts/temp.bash max")
 
-(defpoll wifi :interval "1s" "bash ~/.config/eww/bar/scripts/wifi.bash icon")
+(defpoll wifia :interval "1s" "bash ~/.config/eww/bar/scripts/wifi.bash icon | head -n 1")
+(defpoll wifib :interval "1s" "bash ~/.config/eww/bar/scripts/wifi.bash icon | tail -n 1")
 (defpoll wifiv :interval "1s" "bash ~/.config/eww/bar/scripts/wifi.bash power")
 (defpoll wifim :interval "1s" "bash ~/.config/eww/bar/scripts/wifi.bash power")
 
@@ -16,7 +17,7 @@
 			  :class "module"
 			  (box :class "cpu_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
 			       (label :class "icon-small"
-				      :text "\\ue919\\u030C")
+				      :text "\\ue92d")
 			       (box :valign "center"
 				    :class "graph"
 				    (graph :thickness 3
@@ -30,7 +31,7 @@
 			  
 			  (box :class "mem_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
 			       (label :class "icon-small"
-				      :text "\\ue901")
+				      :text "\\ue92e")
 			       (box :valign "center"
 				    :class "graph"
 				    (graph :thickness 3
@@ -58,7 +59,10 @@
 		       
 			  (box :class "wifi_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
 			       (label :class "icon-small"
-				      :text wifi)
+				      :text wifia)
+			       (label :class "icon-small"
+				      :style "margin-left: -1em; color: grey"
+				      :text wifib)
 			       (box :valign "center"
 				    :class "graph"
 				    (graph :thickness 3

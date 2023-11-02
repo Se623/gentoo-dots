@@ -11,10 +11,10 @@
                         (box    :orientation "h"        
                                 :space-evenly "false"
                                 :spacing "2"
-                                (image  :path volume
-                                        :image-width 35
-                                        :image-height 35
-                                        :tooltip "Volume: ${current-volume}%")
+                                (label :class ""
+				       :text "")
+				(label :class ""
+				       :text "")
                                 (revealer  :transition "slideright"
                                            :reveal volum
                                            :duration "550ms"

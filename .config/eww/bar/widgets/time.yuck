@@ -1,6 +1,6 @@
 ;; Widget, that shows real time ;;
 
-(defpoll time :interval "1s" 'date +"%T" ')
+(defpoll time :interval "1s" 'date +"%H:%M" ')
 (defpoll time-icon :interval "1s" "bash ~/.config/eww/bar/scripts/clock_rot.bash icon")
 
 (defwidget time []

@@ -1,35 +1,34 @@
-;; Cpu usage widget ;;
-(defpoll cpu_usage :interval "1s" "bash ~/.config/eww/bar/scripts/usage.bash cpu")
-(defvar cpu_slider false)
 
-(defwidget cpu []
+(defpoll ram_usage :interval "1s" "bash ~/.config/eww/bar/scripts/usage.bash ram")
+(defvar ram_slider false)
+
+(defwidget ram []
         (box :class "module module-active"
              :hexpand false
              :space-evenly false
              :spacing 5
              (label :class "icon-small"
-		    :text "\\ue92d")
-             (eventbox :onhover "eww update cpu_slider=true"
-                       :onhoverlost "eww update cpu_slider=false"
-		       :tooltip "CPU usage"
+		    :text "\\ue92e")
+             (eventbox :onhover "eww update ram_slider=true"
+                       :onhoverlost "eww update ram_slider=false"
+		       :tooltip "RAM usage"
                        (box :orientation "v"
                             :space-evenly false
-                            (revealer :reveal "${!cpu_slider}"
+                            (revealer :reveal "${!ram_slider}"
                                       :transition "slidedown"
                                       :halign "end"
                                       (box :orientation "h"
                                            :space-evenly false
                                            :height 40
-                                           (label :text "${cpu_usage}%"
+                                           (label :text "${ram_usage}%"
                                                   :valign "center")))
-                            (revealer :reveal cpu_slider
+                            (revealer :reveal ram_slider
                                       :transition "slideup"
                                       (box :orientation "h"
                                            :space-evenly false
                                            :height 40
-                                           (scale :max 101
+                                           :spacing 5
+                                           (scale :max 101 
                                                   :min 0
-                                                  :value cpu_usage
-                                                  :valign "center")))))))
-
+                                                  :value ram_usage)))))))
 

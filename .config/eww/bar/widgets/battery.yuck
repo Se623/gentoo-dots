@@ -20,9 +20,9 @@
                                            :reveal bat
                                            :duration "550ms"
                                            (scale :class "batbar-${battery-color}"
+						  :active false
                                                   :min 0
                                                   :max 101
-                                                  :active false
                                                   :tooltip "Battery: ${battery-cappacity}%"
                                                   :value battery-cappacity
                                                   :onchange "")))))

@@ -253,4 +253,44 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="file:///home/se623/Downloads/icon-font-v0.8.woff" added="2023-10-22T09:23:40.581905Z" modified="2023-10-22T09:23:40.581927Z" visited="2023-10-22T09:23:40.581909Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="font/woff"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-10-22T09:23:40.581918Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/se623/Downloads/iconfont-Regular.ttf" added="2023-10-22T10:17:38.141893Z" modified="2023-10-22T10:17:38.141914Z" visited="2023-10-22T10:17:38.141896Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="font/ttf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-10-22T10:17:38.141903Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/se623/Downloads/iconfont-Regular(1).ttf" added="2023-10-22T10:18:12.019247Z" modified="2023-10-22T10:18:12.019252Z" visited="2023-10-22T10:18:12.019248Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="font/ttf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-10-22T10:18:12.019249Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/se623/Downloads/icons(4).zip" added="2023-10-28T07:46:57.513698Z" modified="2023-10-28T07:46:57.513712Z" visited="2023-10-28T07:46:57.513699Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-10-28T07:46:57.513706Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>

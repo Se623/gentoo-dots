@@ -5,7 +5,6 @@
              :orientation "h"
                      (button :style "border-radius: 10px 0px 0px 10px;"
                              :onclick "if [ $(eww get noti) == true ]; then  eww update noti=false; else  eww update noti=true ; fi"
-                             (image :path "/home/se623/.config/eww/bar/icons/main-icons/notifications.svg"
-                                    :image-width 35
-                                    :image-height 35
+                             (label :class "icon-small"
+				    :text "\\ue92c"
                                     :tooltip "Open notification panel"))))

@@ -1,2 +1,2 @@
-;; (include "./bar/bar.yuck")
+(include "./bar/bar.yuck")
 (include "./dashboard/dashboard.yuck")

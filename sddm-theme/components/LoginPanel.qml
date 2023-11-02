@@ -162,6 +162,10 @@ Item {
 		loginCard.state =  pos == "logincardo" ? "cen" : loginCard.state;
 		loginCard.y = root.height / 4
 		pos = pos == "logincard" ? "logincardo" : "logincard"
+		userList.currentIndex = userList.currentIndex + 1;
+                usernameField.text = userWrapper.items.get(userList.currentIndex).model.name;
+                userPicture.source = userWrapper.items.get(userList.currentIndex).model.icon;
+ 
 	    }
 	}
     }
@@ -186,6 +190,7 @@ Item {
 		loginCard.state =  pos == "logincardo" ? "cen" : loginCard.state;
 		loginCard.y = root.height / 4
 		pos = pos == "logincard" ? "logincardo" : "logincard"
+		
 	    }
 	}
 	

@@ -1,21 +1,13 @@
 ;; Importing components ;;
-(include "./widgets/notes.yuck")
-(include "./widgets/notes.yuck")
-(include "./widgets/notes.yuck")
-(include "./widgets/notes.yuck")
-(include "./widgets/notes.yuck")
-(include "./widgets/notes.yuck")
-(include "./widgets/notes.yuck")
-(include "./widgets/notes.yuck")
-(include "./widgets/notes.yuck")
-
-
-(defwidget control []
-        (box :class "module module-active control"
-             :space-evenly "false"
-             :spacing 5
-             (bat)
-             (volum)))
+(include "./bar/widgets/battery.yuck")
+(include "./bar/widgets/control.yuck")
+(include "./bar/widgets/cpu.yuck")
+(include "./bar/widgets/notif-btn.yuck")
+(include "./bar/widgets/time.yuck")
+(include "./bar/widgets/updates.yuck")
+(include "./bar/widgets/volume.yuck")
+(include "./bar/widgets/workspaces.yuck")
+(include "./bar/widgets/date.yuck")
 
 ;; Building this whole thing ;;
 
@@ -24,14 +16,14 @@
         (box :class "left" :halign "start" :hexpand false :vexpand false :space-evenly false :spacing 10
 	    (box :spacing 0 
 		 :space-evenly false
-		 (notes-btn)
+		 (notif-btn)
                  (control))
+	    (time)
 	    (updates))
         (box :class "center" :halign "start" :hexpand false :vexpand false 
-            (time))
+            )
         (box :class "right" :halign "end" :hexpand false :vexpand false :space-evenly false :spacing 10
-            (cpu)
-	    (ram)
+	    (date)
 	    (workspaces))))
 
 
@@ -42,6 +34,6 @@
                          :width "99%"
                          :height "40"
 	                 :anchor "top center")
-     :stacking "bg"
+     :stacking "fg"
      :exclusive true
      (bar))

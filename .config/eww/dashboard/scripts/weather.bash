@@ -19,23 +19,23 @@ if [ ! -z "$weather" ]; then
     
     #Big long if statement of doom
     if [ "$weather_icon_code" == "50d"  ]; then
-	weather_icon="\\ue921 "
+	weather_icon="\\ue915 "
 	weather_quote="Forecast says it's misty \nMake sure you don't get lost on your way..."
 	weather_hex="#84afdb"
     elif [ "$weather_icon_code" == "50n"  ]; then
-	weather_icon="\\ue921 "
+	weather_icon="\\ue915 "
 	weather_quote="Forecast says it's a misty night \nDon't go anywhere tonight or you might get lost..."
 	weather_hex="#84afdb"
     elif [ "$weather_icon_code" == "01d"  ]; then
-	weather_icon="\\ue91b "
+	weather_icon="\\ue90f "
 	weather_quote="It's a sunny day, gonna be fun! \nDon't go wandering all by yourself though..."
 	weather_hex="#ffd86b"
     elif [ "$weather_icon_code" == "01n"  ]; then
-	weather_icon="\\ue91c "
+	weather_icon="\\ue910 "
 	weather_quote="It's a clear night \nYou might want to take a evening stroll to relax..."
 	weather_hex="#fcdcf6"
     elif [ "$weather_icon_code" == "02d"  ]; then
-	weather_icon="\\ue91f "
+	weather_icon="\\ue920 "
 	weather_quote="It's  cloudy, sort of gloomy \nYou'd better get a book to read..."
 	weather_hex="#adadff"
     elif [ "$weather_icon_code" == "02n"  ]; then

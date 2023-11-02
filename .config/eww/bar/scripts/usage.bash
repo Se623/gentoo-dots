@@ -1,12 +1,8 @@
 #!/bin/bash
 
 if [ "$1" == "ram" ]; then
-    usage=$(free | grep Mem | awk '{print $3}')
+    usage=$(echo "scale=2; $(free -t | grep Total | awk '{print $3}') / ( $(free -t | grep Total | awk '{print $2}') / 100)" | bc)
     echo "$usage"
-
-elif [ "$1" == "ram-total" ]; then
-     mem_total=$(free | grep Mem | awk '{print $2}')
-     echo "$mem_total"
 
 elif [ "$1" == "cpu" ]; then
      usage=$(echo "100 - $(mpstat | grep all | awk '{printf $13}')" | bc)
