@@ -1,2 +1,3 @@
 # gentoo-dots
-My gentoo dotfiles!
+My gentoo dotfiles! (Alpha)
+Use on your risk!!!
