@@ -1,4 +1,7 @@
 ;; Workspaces widget ;;
 
+(defpoll wslist :interval "1s" "bash ~/.config/eww/bar/scripts/workspaces.bash")
+
 (defwidget workspaces []
-        (box :class "module module-active"))
+  (box :class "module module-active"
+       (literal :content wslist)))
