@@ -6,8 +6,8 @@
         (box :class "module module-active"
              :space-evenly false
              :spacing 10
-             (label :class ""
-		    :text "")
+             (label :class "icon-small"
+		    :text "\\ue92f")
              (label :class "fs-16px fw-b"
                     :text date)))
 
