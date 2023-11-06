@@ -7,6 +7,7 @@ $light-grey: #D9D9D9;
 $grey: #1F232B;
 $yellow: #F9B458;
 $purple: #9900FF;
+$purple-light: #CC33FF;
 $elec-blue: #7DF9FF;
 $white: $foreground;
 
@@ -17,6 +18,10 @@ $btn-hover: rgba(150, 150, 150, 0.52);
   font-family: jetbrains mono nerdfont;
 }
 
+.test {
+    background: $red;
+}
+
 .icon {
     font-size: 50px;
     font-family: icon\-font;
@@ -25,6 +30,14 @@ $btn-hover: rgba(150, 150, 150, 0.52);
 .icon-small {
     font-size: 30px;
     font-family: icon\-font;
+}
+
+.volume {
+    color: $purple;
+}
+
+.volume-light {
+    color: $purple-light;
 }
 
 .module {
