@@ -5,11 +5,10 @@ ws="(box :class 'icon-small' :height 35"
 
 for i in 1 2 3 4 5 6 
 do
-    for i
     if [ "$i" == "$focus" ]; then
 	ws="${ws} (button :onclick 'hyprctl dispatch workspace $i' (label :class 'icon-small' :valign 'fill' :text ''))"
-    elif [[ " ${active[*]} " =~ " ${i} "]]; then
-	ws="${ws} (button :onclick 'hyprctl dispatch workspace $i' (label :class 'icon-small' :text 'T'))"
+    elif [[ " ${active[*]} " =~ " ${i} " ]]; then
+	ws="${ws} (button :onclick 'hyprctl dispatch workspace $i' (label :class 'icon-small' :text ''))"
     else
 	ws="${ws} (button :onclick 'hyprctl dispatch workspace $i' (label :class 'icon-small' :text ''))"
     fi
