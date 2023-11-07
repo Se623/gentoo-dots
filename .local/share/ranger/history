@@ -43,8 +43,8 @@ rename icon-font-v0.2
 rename icon-font
 rename icon-font.tff
 open_with 0
-open_with 2
 mkdir components
 mkdir backgrounds
 shell unzip icons(4).zip
+open_with 2
 delete

@@ -3,256 +3,6 @@
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
       xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
 >
-  <bookmark href="file:///home/se623/Downloads/nord-wallpapers-v0-g8wz966t1t9a1.png" added="2023-05-24T17:11:51.741510Z" modified="2023-05-24T17:11:52.140566Z" visited="2023-05-24T17:11:51.741513Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-05-24T17:11:52.140560Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/init.el" added="2023-05-26T08:44:51.419626Z" modified="2023-05-26T08:44:51.419636Z" visited="2023-05-26T08:44:51.419627Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/x-emacs-lisp"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-05-26T08:44:51.419631Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/Emacs.org" added="2023-05-26T08:48:05.290262Z" modified="2023-05-26T08:48:05.290275Z" visited="2023-05-26T08:48:05.290265Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/org"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-05-26T08:48:05.290269Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/WhatsApp%20Unknown%202023-05-28%20at%2010.00.42.zip" added="2023-05-28T07:00:41.877841Z" modified="2023-05-28T07:00:41.877887Z" visited="2023-05-28T07:00:41.877844Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-05-28T07:00:41.877852Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/WhatsApp%20Image%202023-05-28%20at%2010.00.13.jpeg" added="2023-05-28T07:01:23.806053Z" modified="2023-05-28T07:01:23.806066Z" visited="2023-05-28T07:01:23.806055Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-05-28T07:01:23.806060Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/WhatsApp%20Image%202023-05-28%20at%2010.00.13(1).jpeg" added="2023-05-28T07:01:29.385789Z" modified="2023-05-28T07:01:29.385802Z" visited="2023-05-28T07:01:29.385791Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-05-28T07:01:29.385794Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/WhatsApp%20Image%202023-05-28%20at%2010.00.13(2).jpeg" added="2023-05-28T07:01:33.159685Z" modified="2023-05-28T07:01:33.159694Z" visited="2023-05-28T07:01:33.159686Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-05-28T07:01:33.159689Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/WhatsApp%20Image%202023-05-28%20at%2010.00.12.jpeg" added="2023-05-28T07:01:37.912380Z" modified="2023-05-28T07:01:37.912390Z" visited="2023-05-28T07:01:37.912382Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-05-28T07:01:37.912385Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/NuFVbLW.jpg" added="2023-05-28T13:47:55.574884Z" modified="2023-05-28T13:47:55.897656Z" visited="2023-05-28T13:47:55.574891Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-05-28T13:47:55.897652Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/icons.zip" added="2023-06-02T15:58:19.016156Z" modified="2023-06-02T15:58:19.016162Z" visited="2023-06-02T15:58:19.016156Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-06-02T15:58:19.016159Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/icons(1).zip" added="2023-06-03T05:18:20.544928Z" modified="2023-07-28T06:24:29.241984Z" visited="2023-06-03T05:18:20.544930Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-07-28T06:24:29.241979Z" count="3"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/icons.7z" added="2023-07-01T05:54:33.948853Z" modified="2023-07-01T05:54:33.948871Z" visited="2023-07-01T05:54:33.948855Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/x-7z-compressed"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-07-01T05:54:33.948860Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/icons(1).7z" added="2023-07-01T05:54:36.485635Z" modified="2023-07-01T05:54:36.485645Z" visited="2023-07-01T05:54:36.485636Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/x-7z-compressed"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-07-01T05:54:36.485640Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/icons(2).7z" added="2023-07-01T05:59:15.246337Z" modified="2023-07-01T05:59:15.246348Z" visited="2023-07-01T05:59:15.246338Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/x-7z-compressed"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-07-01T05:59:15.246342Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/icons(2).zip" added="2023-07-01T06:03:19.736677Z" modified="2023-08-02T19:12:50.569263Z" visited="2023-07-01T06:03:19.736678Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-08-02T19:12:50.569256Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/components.zip" added="2023-07-09T08:04:10.979767Z" modified="2023-07-09T08:04:10.979776Z" visited="2023-07-09T08:04:10.979768Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-07-09T08:04:10.979771Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/clock.zip" added="2023-07-17T06:41:11.290645Z" modified="2023-07-17T06:41:11.291551Z" visited="2023-07-17T06:41:11.290648Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-07-17T06:41:11.290653Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/emacs-from-scratch-6d078217a41134cc667f969430d150c50d03f448.zip" added="2023-07-19T09:02:38.932232Z" modified="2023-07-19T09:02:38.932239Z" visited="2023-07-19T09:02:38.932232Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-07-19T09:02:38.932235Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/menu.zip" added="2023-07-25T12:44:30.194557Z" modified="2023-07-25T12:44:30.194564Z" visited="2023-07-25T12:44:30.194558Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-07-25T12:44:30.194560Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/updates.zip" added="2023-07-25T12:44:31.204676Z" modified="2023-07-25T12:44:31.204689Z" visited="2023-07-25T12:44:31.204678Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-07-25T12:44:31.204683Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/feather.woff" added="2023-08-02T19:12:48.152867Z" modified="2023-08-02T19:12:48.153107Z" visited="2023-08-02T19:12:48.152869Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="font/woff"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-08-02T19:12:48.152874Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/feather(1).ttf" added="2023-08-03T08:27:23.021924Z" modified="2023-08-03T08:27:23.021935Z" visited="2023-08-03T08:27:23.021926Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="font/ttf"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-08-03T08:27:23.021930Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/icon-font-v0.2.ttf" added="2023-08-11T16:50:00.685602Z" modified="2023-08-11T16:50:00.685635Z" visited="2023-08-11T16:50:00.685609Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="font/ttf"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-08-11T16:50:00.685618Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/gentoo-dots/sddm-theme/backgrounds/cliffside.png" added="2023-09-20T15:58:40.897794Z" modified="2023-09-20T15:58:41.267654Z" visited="2023-09-20T15:58:40.897797Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-09-20T15:58:41.267628Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/se623/Downloads/sddm-theme-corners-main.zip" added="2023-09-20T16:19:35.370524Z" modified="2023-09-20T16:19:35.370532Z" visited="2023-09-20T16:19:35.370525Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-09-20T16:19:35.370528Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
   <bookmark href="file:///home/se623/Downloads/icon-font-v0.8.woff" added="2023-10-22T09:23:40.581905Z" modified="2023-10-22T09:23:40.581927Z" visited="2023-10-22T09:23:40.581909Z">
     <info>
       <metadata owner="http://freedesktop.org">
@@ -263,12 +13,12 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/se623/Downloads/iconfont-Regular.ttf" added="2023-10-22T10:17:38.141893Z" modified="2023-10-22T10:17:38.141914Z" visited="2023-10-22T10:17:38.141896Z">
+  <bookmark href="file:///home/se623/Downloads/iconfont-Regular.ttf" added="2023-10-22T10:17:38.141893Z" modified="2023-11-05T13:07:39.738536Z" visited="2023-10-22T10:17:38.141896Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="font/ttf"/>
         <bookmark:applications>
-          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-10-22T10:17:38.141903Z" count="1"/>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-11-05T13:07:39.738531Z" count="4"/>
         </bookmark:applications>
       </metadata>
     </info>
@@ -289,6 +39,26 @@
         <mime:mime-type type="application/zip"/>
         <bookmark:applications>
           <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-10-28T07:46:57.513706Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/se623/Downloads/discord-0.0.33.tar.gz" added="2023-11-03T09:16:15.897523Z" modified="2023-11-03T09:16:15.897543Z" visited="2023-11-03T09:16:15.897525Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-11-03T09:16:15.897530Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/se623/Downloads/iconfont-Regular(2).ttf" added="2023-11-05T08:30:31.828595Z" modified="2023-11-05T08:30:31.828610Z" visited="2023-11-05T08:30:31.828598Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="font/ttf"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2023-11-05T08:30:31.828602Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>

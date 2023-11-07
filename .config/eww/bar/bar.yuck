@@ -32,7 +32,7 @@
      :geometry (geometry :x "0px"
                          :y "1%"
                          :width "99%"
-                         :height "40"
+                         :height "30"
 	                 :anchor "top center")
      :stacking "fg"
      :exclusive true
