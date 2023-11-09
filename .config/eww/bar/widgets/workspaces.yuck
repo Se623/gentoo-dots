@@ -1,6 +1,6 @@
 ;; Workspaces widget ;;
 
-(defpoll wslist :interval "1s" "bash ~/.config/eww/bar/scripts/workspaces.bash")
+(deflisten wslist :initial "dcdsdc " "bash ~/.config/eww/bar/scripts/workspaces.bash")
 
 (defwidget workspaces []
   (box :class "module module-active"
