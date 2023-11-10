@@ -1,6 +1,7 @@
 ;; Importing components ;;
 (include "./bar/widgets/battery.yuck")
-(include "./bar/widgets/control.yuck")
+(include "./bar/widgets/control-left.yuck")
+(include "./bar/widgets/control-right.yuck")
 (include "./bar/widgets/cpu.yuck")
 (include "./bar/widgets/notif-btn.yuck")
 (include "./bar/widgets/time.yuck")
@@ -17,14 +18,15 @@
 	    (box :spacing 0 
 		 :space-evenly false
 		 (notif-btn)
-                 (control))
+                 (control-left))
 	    (time)
 	    (updates))
         (box :class "center" :halign "start" :hexpand false :vexpand false 
             )
         (box :class "right" :halign "end" :hexpand false :vexpand false :space-evenly false :spacing 10
 	    (date)
-	    (workspaces))))
+	    (workspaces)
+	    (control-right))))
 
 
 (defwindow bar
