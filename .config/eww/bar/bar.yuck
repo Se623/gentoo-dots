@@ -4,6 +4,7 @@
 (include "./bar/widgets/control-right.yuck")
 (include "./bar/widgets/cpu.yuck")
 (include "./bar/widgets/notif-btn.yuck")
+(include "./bar/widgets/dashb-btn.yuck")
 (include "./bar/widgets/time.yuck")
 (include "./bar/widgets/updates.yuck")
 (include "./bar/widgets/volume.yuck")
@@ -26,8 +27,10 @@
         (box :class "right" :halign "end" :hexpand false :vexpand false :space-evenly false :spacing 10
 	    (date)
 	    (workspaces)
-	    (control-right))))
-
+	    (box :spacing 0 
+		 :space-evenly false
+		 (control-right)
+		 (dashb-btn)))))
 
 (defwindow bar
      :monitor 0

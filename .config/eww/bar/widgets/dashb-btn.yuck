@@ -1,9 +1,9 @@
 ;; dashboard button ;;
 
-(defwidget notif-btn []
-        (box :class "module module-active module-notes-btn"
+(defwidget dashb-btn []
+        (box :class "module module-active module-dashb-btn"
              :orientation "h"
-                     (button :style "border-radius: 10px 0px 0px 10px;"
+                     (button :style "border-radius: 0px 10px 10px 0px;"
                              :onclick "dashboard-exec"
                              (label :class "icon-small"
 				    :text "\\ue92b"

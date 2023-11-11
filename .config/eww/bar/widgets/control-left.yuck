@@ -1,7 +1,7 @@
 ;; Control widget (Battery, volume, wifi, and notification widget) ;;
 
 (defwidget control-left []
-        (box :class "module module-active control"
+        (box :class "module module-active control-l"
              :space-evenly "false"
              :spacing 5
              (bat)

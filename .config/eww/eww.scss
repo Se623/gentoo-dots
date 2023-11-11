@@ -87,9 +87,21 @@ tooltip {
   color: $light-grey;
 }
 
-.control {
+.control-l {
   border-left-color: transparent;
   border-radius: 0px 10px 10px 0px;
+}
+
+.control-r {
+  border-left-color: transparent;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.module-dashb-btn {
+  border-right-color: transparent;
+  border-radius: 0px 10px 10px 0px;
+  background: $grey;
+  padding: 0.5rem;
 }
 
 .module-notes-btn {

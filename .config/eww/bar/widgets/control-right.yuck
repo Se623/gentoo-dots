@@ -1,7 +1,7 @@
 ;; Control widget (Battery, volume, wifi, and notification widget) ;;
 
 (defwidget control-right []
-        (box :class "module module-active control"
-             :space-evenly "false"
-             :spacing 5
-             ))
+  (box :class "module module-active control-r"
+       :space-evenly "false"
+       :spacing 5
+       ))
