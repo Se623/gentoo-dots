@@ -1,7 +1,0 @@
-#!/bin/bash
-curPaper=3
-
-monitor="eDP-1"
-
-wallpapers=( ~/Pictures/figure_nord.png ~/Pictures/neon_city_nord.png ~/Pictures/forest.png ~/Pictures/mountans.png ~/Pictures/mountans-nord.png ~/Pictures/keyboards.png )
-
