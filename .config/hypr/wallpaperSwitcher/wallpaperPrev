@@ -1,0 +1,20 @@
+#!/bin/bash
+
+. ~/.config/hypr/scripts/hyprpaperScript/wallpaperGeneral
+
+curPaper=$((curPaper-1))
+
+# Checking if the current wallpaper number is correct
+
+
+if [ $curPaper -lt 0 ]; then
+	curPaper=$((${#wallpapers[@]} - 1))
+fi
+
+
+swww img ${wallpapers[$curPaper]}
+
+
+sed -r -i "s/curPaper=[0-9]*/curPaper=$curPaper/" ~/.config/hypr/scripts/hyprpaperScript/wallpaperGeneral
+
+
