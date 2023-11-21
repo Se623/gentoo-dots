@@ -7,18 +7,7 @@
 (defvar morebgoffset 4)
 
 (defwidget bg []
-  (image
-    :class "dynbg-image"
-    ; :style "background-position: ${(activews - 5)*MOVEMULTIPLIER > 50 ? 100 : 50+(activews - 5)*MOVEMULTIPLIER}% 20%"
-    :style "
-    margin-left: ${(5 - (activews > 10 ? 10 : activews))*MOVEMULTIPLIER}px;
-    margin-right: ${((activews > 10 ? 10 : activews) - 5)*MOVEMULTIPLIER}px;
-    "
-    :path "images/wallpaper/wallpaper"
-    :image-width {RES_WIDTH*BG_ZOOM}
-    :image-height {RES_HEIGHT*BG_ZOOM}
-  )
-)
+  (box :class "bg"))
 
 (defwindow dashboard
   :monitor 0
