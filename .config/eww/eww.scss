@@ -46,6 +46,12 @@ $btn-hover: rgba(150, 150, 150, 0.52);
     padding: 0.2rem 1rem 0.2rem 1rem;
 }
 
+.module-db {
+    background: transparent;
+    border: 5px solid rgba(256, 256, 256, 10);
+    border-radius: 1rem;
+}
+
 tooltip {
     background: $background;
     border-radius: 5px;
