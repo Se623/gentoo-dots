@@ -7,8 +7,10 @@
 	(box :orientation "v"
 	     :class "module-db"
 	     :space-evenly "false"
+	     :spacing 30
 	     (box :orientation "v"
 		  :space-evenly "false"
+		  :style "padding: 2rem"
 		  :spacing 30
 		  (image :class ""
 			 :image-width 100

@@ -1,0 +1,23 @@
+;; Clipboard widget ;;
+
+(defpoll selected :interval "1s" "~/.config/eww/bar/scripts/clipboard --selected") 
+(defvar copy false)
+
+(defwidget clipboard []
+  (revealer
+   :reveal {!vol && !bat ? true : false}
+   (eventbox
+    :onhover "eww update copy=true"
+    :onhoverlost "eww update copy=false"
+    :tooltip "Clipboard"
+    (box    :orientation "h"
+            :space-evenly "false"
+            :spacing "2"
+	    (label :class "icon bar-icon"
+		   :text "\\ue91e")
+            (revealer  :transition "slideright"
+                       :reveal copy
+                       :duration "550ms"
+                       (label :class "bar-text"
+			      :limit-width 20
+			      :text selected))))))

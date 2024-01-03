@@ -1,0 +1,6 @@
+
+(defwidget control []
+  (box :class "block"
+       :space-evenly false
+       (battery)
+       (volume)))

@@ -1,0 +1,13 @@
+
+
+(defwidget main []
+  (box :class "block"
+       (button :class
+	       (label :class "icon bar-icon"
+		      :text ""))
+       (button :class
+	       (label :class "icon bar-icon"
+		      :text ""))
+       (button :class
+	       (label :class "icon bar-icon"
+		      :text ""))))

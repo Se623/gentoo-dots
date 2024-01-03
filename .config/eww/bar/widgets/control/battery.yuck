@@ -7,7 +7,7 @@
 (defwidget battery []
   (revealer
    :reveal {!vol && !copy ? true : false}
-   :transition 
+   :transition
    (eventbox
     :onhover "eww update bat=true"
     :onhoverlost "eww update bat=false"

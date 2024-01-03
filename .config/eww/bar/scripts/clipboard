@@ -1,0 +1,27 @@
+#!/bin/bash
+
+get_sel() {
+    sel=`env QT_QPA_PLATFORM=xcb copyq tab "&clipboard" read 1`
+    if [[ -z "$sel" ]]; then
+	echo "No items"
+    else
+	echo "$sel"
+    fi
+
+}
+
+get_list() {
+    echo "[`copyq eval -- "tab('$1'); for(i=size(); i>0; --i) print(str(read(i-1)) + '\n');" | tr '\n' ', x'`]"
+}
+
+get_tabs() {
+    echo "[`copyq tab | tr '\n' ', '`]"
+}
+
+if [[ "$1" == "--selected" ]]; then
+    get_sel
+elif [[ "$1" == "--list" ]]; then
+    get_list "$2"
+elif [[ "$1" == "--tabs" ]]; then
+    get_tabs "$2"
+fi

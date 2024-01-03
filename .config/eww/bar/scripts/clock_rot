@@ -1,8 +1,8 @@
-#!bin/bash
+#!/bin/bash
 
 icon=$HOME/.config/eww/icons/clock/clock.svg
 
-sed -i "s/.st0{fill:#[A-F0-9]*;/.st0{fill:#7DF9FF;/" $icon
+sed -i "s/.st0{fill:#[A-F0-9]*;/.st0{fill:#FFFFFF;/" $icon
 
 hours=$(date +'%I'*30 | bc)
 minutes=$(date +'%M'*6 | bc)

@@ -1,158 +1,67 @@
-$background: #1A1B26;
-$foreground: #A9B1D6;
+// Reset styles
 
-$red: #E05C4B;
-$green: #33FF93;
-$light-grey: #D9D9D9;
-$grey: #1F232B;
-$yellow: #F9B458;
-$purple: #9900FF;
-$purple-light: #CC33FF;
-$elec-blue: #7DF9FF;
-$white: $foreground;
-
-$btn-hover: rgba(150, 150, 150, 0.52);
-
-* { 
-  all: unset;
-  font-family: jetbrains mono nerdfont;
+* {
+    all: unset;
 }
 
 .test {
-    background: $red;
+    background-color: red;
 }
+
+// Importing themes
+
+@import "colors/default.scss";
+
+// Icons config
+
+//$icons: battery, volume, wifi, clipboard, backapps, bluetooth, time, music, wheather, search, dashboard, notifications, ws-foc, ws-act, ws-uct; 
+//$icon-sizes: 30px, 50px;
+
+//@each $icon in $icons {
+//    @each $size in $icon-sizes {
+//	.icon-#{$icon}-#{$size} {
+//	    font-size: $size;
+//	    color: $icon;
+//	}
+//    }
+//}
+
+// Text config
 
 .icon {
-    font-size: 50px;
-    font-family: icon\-font;
+    font-family: iconFont
 }
 
-.icon-small {
-    font-size: 25px;
-    font-family: icon\-font;
+.bar-text {
+    font-size: 0.9rem
 }
 
-.volume {
-    color: $purple;
+.bar-icon {
+    font-size: 1.5rem
 }
 
-.volume-light {
-    color: $purple-light;
-}
+// Block config
 
-.module {
-    background: $background;
-    border-radius: 10px;
+.block {
+    background-color: $block;
+    border-radius: 1em;
     padding: 0.2rem 1rem 0.2rem 1rem;
+    .db {
+	background: $block-db;
+    }
 }
 
-.module-db {
-    background: transparent;
-    border: 5px solid rgba(256, 256, 256, 10);
-    border-radius: 1rem;
-}
 
-tooltip {
-    background: $background;
-    border-radius: 5px;
-    padding: 0 2000px;
-}
-
-.graph {
-    border-radius: 5px;
-    background-color: black;
-    min-height: 32px;
-    border: solid 2px grey;
-    color: purple;
-}
-
-.bg {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-@keyframes color-change {
-  from {
-    background: transparent;
-  }
-
-  75% {
-    background:	transparent;
-  }
-
-  to {
-   background: $btn-hover;
-  }
-
-}
-
-.module-active {
-  color: $elec-blue
-}
-
-.module-unactive {
-  color: $light-grey;
-}
-
-.control-l {
-  border-left-color: transparent;
-  border-radius: 0px 10px 10px 0px;
-}
-
-.control-r {
-  border-left-color: transparent;
-  border-radius: 10px 0px 0px 10px;
-}
-
-.module-dashb-btn {
-  border-right-color: transparent;
-  border-radius: 0px 10px 10px 0px;
-  background: $grey;
-  padding: 0.5rem;
-}
-
-.module-notes-btn {
-  border-right-color: transparent;
-  border-radius: 10px 0px 0px 10px;
-  background: $grey;
-  padding: 0.5rem;
-}
-
-.notes-btn:hover {
-  animation-duration: 1s;
-  animation-name: color-change;
-  background: $btn-hover;
-}
+// Scale config
 
 scale trough {
-  background-color: $grey;
+  background-color: $scale;
   border-radius: 5px;
   min-height: 10px;
   min-width: 80px;
 }
 
 scale trough highlight {
-   background: $elec-blue;
-   border-radius: 5px;
-}   
-
-.volbar trough highlight {
-  background: $purple;
-  border-radius: 5px;
-}
-
-
-@each $color in red, yellow, green {
-  .batbar-#{$color} trough highlight {
-    @if $color == green {
-      background: $green;
-    }
-    @if	$color == yellow {
-      background: $yellow;
-    }
-    @if	$color == red	{
-      background: $red;
-    }
+    background-color: #FFFFFF;
     border-radius: 5px;
-  }
 }
-

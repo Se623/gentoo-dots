@@ -1,36 +1,25 @@
 ;; Importing components ;;
-(include "./bar/widgets/battery.yuck")
-(include "./bar/widgets/control-left.yuck")
-(include "./bar/widgets/control-right.yuck")
-(include "./bar/widgets/cpu.yuck")
-(include "./bar/widgets/notif-btn.yuck")
-(include "./bar/widgets/dashb-btn.yuck")
-(include "./bar/widgets/time.yuck")
-(include "./bar/widgets/updates.yuck")
-(include "./bar/widgets/volume.yuck")
+(include "./bar/widgets/control/battery.yuck")
+(include "./bar/widgets/control/control.yuck")
+(include "./bar/widgets/control/volume.yuck")
+(include "./bar/widgets/control/clipboard.yuck")
 (include "./bar/widgets/workspaces.yuck")
-(include "./bar/widgets/date.yuck")
+(include "./bar/widgets/datetime.yuck")
+(include "./bar/widgets/music.yuck")
+(include "./bar/widgets/main.yuck")
 
 ;; Building this whole thing ;;
 
 (defwidget bar []
     (centerbox :style "background: transparent;"
         (box :class "left" :halign "start" :hexpand false :vexpand false :space-evenly false :spacing 10
-	    (box :spacing 0 
-		 :space-evenly false
-		 (notif-btn)
-                 (control-left))
-	    (time)
-	    (updates))
+	     (workspaces)
+	     (music)
+	     (datetime))
         (box :class "center" :halign "start" :hexpand false :vexpand false 
-            )
+            (main))
         (box :class "right" :halign "end" :hexpand false :vexpand false :space-evenly false :spacing 10
-	    (date)
-	    (workspaces)
-	    (box :spacing 0 
-		 :space-evenly false
-		 (control-right)
-		 (dashb-btn)))))
+	    (control))))
 
 (defwindow bar
      :monitor 0

@@ -19,21 +19,10 @@ if [ "$1" == "icon" ]; then
     echo "$icon"
     
 elif [ "$1" == "percent" ]; then
-
     echo $per
 
 elif [ "$1" == "color" ]; then
-
-    if [ "$per" -gt "25" ]; then
-	sed -i "s/.st0{fill:#[A-F0-9]*;}/.st0{fill:#33FF93;}/" $HOME/.config/eww/icons/battery/battery.svg
-	color=green
-    elif [ "$per" -gt "10" ]; then
-	sed -i "s/.st0{fill:#[A-F0-9]*;}/.st0{fill:#F9B45B;}/" $HOME/.config/eww/icons/battery/battery.svg
-        color=yellow
-    else
-	sed -i "s/.st0{fill:#[A-F0-9]*;}/.st0{fill:#E05C4B;}/" $HOME/.config/eww/bar/icons/battery/battery-low.svg
-        color=red
-    fi
-    echo "$color"
+	sed -i "s/.st0{fill:#[A-F0-9]*;}/.st0{fill:#FFFFFF;}/" $HOME/.config/eww/icons/battery/battery.svg
+	sed -i "s/.st0{fill:#[A-F0-9]*;}/.st0{fill:#FFFFFF;}/" $HOME/.config/eww/icons/battery/battery-low.svg
 fi
 

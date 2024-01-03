@@ -1,0 +1,28 @@
+;; Music widget ;;
+
+(defvar mus false)
+(defvar musicon false)
+(defpoll music :interval "1s" "~/.config/eww/bar/scripts/music --cover")
+(defpoll song :interval "1s" "~/.config/eww/bar/scripts/music --song")
+
+(defwidget music []
+  (box :class "block"
+       (eventbox
+	:onhover "eww update mus=true"
+	:onhoverlost "eww update mus=false"
+	:tooltip "music"
+	(box    :orientation "h"
+		:space-evenly "false"
+		:spacing "2"
+		(image  :path music
+			:visible {matches(music, "false") ? "false" : "true"}
+			:image-width 25
+			:image-height 25)
+		(label :class "icon bar-icon"
+		       :visible {matches(music, "false") ? "true" : "false"}
+		       :text "\\ue91d")
+		(revealer  :transition "slideright"
+			   :reveal mus
+			   :duration "550ms"
+                           (label :class "bar-text"
+				  :text song))))))

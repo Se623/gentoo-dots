@@ -1,7 +1,7 @@
 ;; Workspaces widget ;;
 
-(deflisten wslist :initial "(box :class 'icon-small' :height 35 (button :onclick 'hyprctl dispatch workspace 1' (label :class 'icon-small' :valign 'fill' :text '')) (button :onclick 'hyprctl dispatch workspace 2' (label :class 'icon-small' :text '')) (button :onclick 'hyprctl dispatch workspace 3' (label :class 'icon-small' :text '')) (button :onclick 'hyprctl dispatch workspace 4' (label :class 'icon-small' :text '')) (button :onclick 'hyprctl dispatch workspace 5' (label :class 'icon-small' :text '')) (button :onclick 'hyprctl dispatch workspace 6' (label :class 'icon-small' :text '')))" "bash ~/.config/eww/bar/scripts/workspaces.bash")
+(deflisten wslist :initial "(box :class 'icon bar-icon' :height 35 :spacing 5 (button :onclick 'hyprctl dispatch workspace 1' (label :class 'icon bar-icon' :valign 'fill' :text '')) (button :onclick 'hyprctl dispatch workspace 2' (label :class 'icon bar-icon' :text '')) (button :onclick 'hyprctl dispatch workspace 3' (label :class 'icon bar-icon' :text '')) (button :onclick 'hyprctl dispatch workspace 4' (label :class 'icon bar-icon' :text '')) (button :onclick 'hyprctl dispatch workspace 5' (label :class 'icon bar-icon' :text '')) (button :onclick 'hyprctl dispatch workspace 6' (label :class 'icon bar-icon' :text '')))" "~/.config/eww/bar/scripts/workspaces")
 
 (defwidget workspaces []
-  (box :class "module module-active"
+  (box :class "block"
        (literal :content wslist)))

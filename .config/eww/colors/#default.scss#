@@ -1,0 +1,7 @@
+// Default theme
+$block: rgba(18, 18, 18, 0.8);
+$block-db: rgba(26, 26, 26, 0.8);
+$scale: rgb(29, 29, 29);
+
+$volume
+$volume-b

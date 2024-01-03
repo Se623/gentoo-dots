@@ -1,0 +1,7 @@
+
+
+(defwidget main []
+  (box :class "block"
+       (button)
+       (button)
+       (button)))
