@@ -2,12 +2,18 @@
 
 (defwidget main []
   (box :class "block"
-       (button :class
+       :spacing 5
+       :space-evenly false
+       (button :class ""
 	       (label :class "icon bar-icon"
-		      :text ""))
-       (button :class
+		      :tooltip "Notifications (WIP)"
+		      :text "N"))
+       (button :class ""
 	       (label :class "icon bar-icon"
-		      :text ""))
-       (button :class
+		      :tooltip "Dashboard (WIP)"
+		      :text "D"))
+       (button :class ""
+	       :onclick "rofi -show drun&"
 	       (label :class "icon bar-icon"
-		      :text ""))))
+		      :tooltip "Search apps"
+		      :text "S"))))

@@ -8,6 +8,7 @@
         (box :class "block"
              :space-evenly false
              :spacing 10
+	     :tooltip "Current time and date"
              (image :path time-icon
                     :image-width 25
                     :image-height 25)

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+get_bluedev() {
+    dev=`bluetoothctl devices | head -n 1 | awk '{print $3}'`
+    if [[ -z "$dev" ]]; then
+	echo "Not connected"
+    else
+	echo "Connected to $dev"
+    fi
+
+}
+
+
+
+if [ "$1" == "--dev" ]; then
+    get_bluedev
+fi

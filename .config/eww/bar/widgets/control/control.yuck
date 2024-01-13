@@ -1,7 +1,17 @@
+(include "./bar/widgets/control/battery.yuck")
+(include "./bar/widgets/control/volume.yuck")
+(include "./bar/widgets/control/wifi.yuck")
+(include "./bar/widgets/control/bluetooth.yuck")
+(include "./bar/widgets/control/clipboard.yuck")
+(include "./bar/widgets/control/tray.yuck")
 
 (defwidget control []
   (box :class "block"
        :space-evenly false
-       (clipboard)
+       :spacing 1
        (battery)
-       (volume)))
+       (volume)
+       (wifi)
+       (bluetooth)
+       (clipboard)
+       (tray)))

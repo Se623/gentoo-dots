@@ -6,8 +6,8 @@
 
 (defwidget battery []
   (revealer
-   :reveal {!vol && !copy ? true : false}
-   :transition
+   :reveal {!vol && !copy && !wifi && !tray && !blue ? true : false}
+   :transition {vol || wifi || copy ? "slideleft" : "slideright"}
    (eventbox
     :onhover "eww update bat=true"
     :onhoverlost "eww update bat=false"
@@ -27,4 +27,5 @@
                               :min 0
                               :max 101
                               :value battery-cappacity
-                              :onchange ""))))))
+			      :width 150
+			      :onchange ""))))))
