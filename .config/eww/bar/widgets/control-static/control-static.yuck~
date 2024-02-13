@@ -1,0 +1,9 @@
+(include "./bar/widgets/control/lang.yuck")
+(include "./bar/widgets/control/tray.yuck")
+
+(defwidget control-static []
+  (box :class "block"
+       :space-evenly false
+       :spacing 1
+       (lang)
+       (tray)))

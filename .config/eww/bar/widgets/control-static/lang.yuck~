@@ -1,0 +1,9 @@
+
+(defwidget lang []
+	   (box    :orientation "h"
+		   :space-evenly "false"
+		   :spacing 2
+		   :tooltip "Language layout"
+		   (label :class "icon bar-icon"
+			  :text "en")
+		   (button)))

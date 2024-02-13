@@ -4,28 +4,22 @@
 (defpoll name :interval "1s" "whoami")
 
 (defwidget user []
-	(box :orientation "v"
-	     :class "module-db"
-	     :space-evenly "false"
-	     :spacing 30
-	     (box :orientation "v"
-		  :space-evenly "false"
-		  :style "padding: 2rem"
-		  :spacing 30
-		  (image :class ""
-			 :image-width 100
-			 :image-height 100
-			 :path user)
-		  (label :class ""
-			 :text name))
-	     (label :class ""
-		    :text "Uptime: ")))
-
-(defwindow user
-     :monitor 0
-     :geometry (geometry :x "10%"
-                         :y "5%"
-                         :width "250px"
-                         :height "300px")
-     :stacking "overlay"
-     (user))
+	   (box :orientation "v"
+		:space-evenly "false"
+		(box :orientation "v"
+		     :class "block db"
+		     :space-evenly "false"
+		     :spacing 30
+		     (box :orientation "v"
+			  :space-evenly "false"
+			  :style "padding: 2rem"
+			  :spacing 30
+			  (image :class ""
+				 :image-width 100
+				 :image-height 100
+				 :path user)
+			  (label :class ""
+				 :text name))
+		     (label :class ""
+			    :text "Uptime: {`uptime -p | sed 's/up/Uptime:/1'`}"))
+		(box :height 400)))

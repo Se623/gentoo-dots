@@ -1,0 +1,9 @@
+(include "./bar/widgets/control_rem/wifi.yuck")
+(include "./bar/widgets/control_rem/bluetooth.yuck")
+
+(defwidget control-rm []
+  (box :class "block"
+       :space-evenly false
+       :spacing 1
+       (wifi)
+       (bluetooth)))

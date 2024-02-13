@@ -1,2 +1,3 @@
+(include "./config/config-reciver.yuck")
 (include "./bar/bar.yuck")
 (include "./dashboard/dashboard.yuck")

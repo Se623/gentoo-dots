@@ -3,18 +3,36 @@
 (include "./dashboard/widgets/power.yuck")
 (include "./dashboard/widgets/weather.yuck")
 
-(defvar MOVEMULTIPLIER 30)
-(defvar morebgoffset 4)
+(defvar dashrev false)
 
 (defwidget bg []
-  (box :class "bg"))
+	   (box :valign "end"
+		(box :height 2
+		     :halign "fill"
+		     (revealer :reveal dashrev
+			       :transition "slideup"
+			       :duration "400ms"
+			       (box :orientation "v"
+				    :space-evenly "false"
+				(box :class "block"
+				     :height {height*0.75}
+				     (centerbox :valign "center"
+						:halign "center"
+						:height {height*0.6}
+						:width {width*0.6}
+						:orientation "v"
+						(box
+						 (user))
+						(box)
+						(box)))
+				(box :height {height*0.2}))))))
 
 (defwindow dashboard
   :monitor 0
   :geometry (geometry :x "0px"
-                      :y "0px"
-                      :width "200%"
-                      :height "200%"
-                      :anchor "center")
+                      :y "-1%"
+                      :width "70%"
+                      :height "0%"
+                      :anchor "bottom center")
   :stacking "fg"
   (bg))

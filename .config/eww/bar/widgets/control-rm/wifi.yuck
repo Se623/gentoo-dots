@@ -7,10 +7,11 @@
 
 (defwidget wifi []
   (revealer
-   :reveal {!bat && !copy && !vol && !tray && !blue ? true : false}
-   :transition {!bat || !vol || copy ? "slideleft" : "slideright"}
+   :reveal {!blue ? true : false}
+   :transition "slideright"
+   :duration unrev
    (eventbox
-    :onhover "eww update wifi=true"                
+    :onhover "~/.config/eww/bar/scripts/delay --set wifi"
     :onhoverlost "eww update wifi=false"
     :tooltip "Internet connection"
     (box    :orientation "h"        

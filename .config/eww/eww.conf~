@@ -1,0 +1,35 @@
+# Screen resolution
+screen {
+       automatic = false
+
+       screen_height = 1020
+       screen_width = 500
+}
+
+# Colors
+colors {
+       block = 121212cc 
+       block-db = 1a1a1acc
+       scale = 1d1d1d
+       icons {
+       	     monocolor = true
+	     icon-color = ffffff
+
+	     #battery-ic
+	     #volume-ic
+	     #internet-ic
+       }
+       
+}
+
+workspaces {
+	   ws-number = 6
+}
+
+weather {
+	method = coordinates
+	lat = 45
+	cat = 45
+	unit = metric
+	#city-id 
+}

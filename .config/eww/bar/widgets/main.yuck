@@ -2,18 +2,19 @@
 
 (defwidget main []
   (box :class "block"
-       :spacing 5
+       :spacing 10
        :space-evenly false
        (button :class ""
 	       (label :class "icon bar-icon"
 		      :tooltip "Notifications (WIP)"
-		      :text "N"))
+		      :text "\\ue933"))
        (button :class ""
+	       :onclick {dashrev ? "eww update dashrev=false" : "eww update dashrev=true"} 
 	       (label :class "icon bar-icon"
-		      :tooltip "Dashboard (WIP)"
-		      :text "D"))
+		      :tooltip "Dashboard"
+		      :text "\\ue91c"))
        (button :class ""
 	       :onclick "rofi -show drun&"
 	       (label :class "icon bar-icon"
 		      :tooltip "Search apps"
-		      :text "S"))))
+		      :text "\\ue934"))))

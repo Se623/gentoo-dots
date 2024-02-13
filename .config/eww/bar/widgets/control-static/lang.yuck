@@ -1,0 +1,11 @@
+
+(defpoll curlang :interval "1s" "hyprctl devices | grep -B 1 'main: yes' | head -1 | grep -o ': .*' | head -c 4 | tail -c 2 | tr '[:upper:]' '[:lower:]'")
+
+(defwidget lang []
+	   (box    :orientation "h"
+		   :space-evenly "false"
+		   :spacing 2
+		   :tooltip "Language layout"
+		   (label :class "icon bar-icon"
+			  :text curlang)
+		   (button)))

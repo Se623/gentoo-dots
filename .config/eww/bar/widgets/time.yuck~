@@ -1,10 +1,9 @@
 ;; Widget, that shows real time ;;
 
 (defpoll time :interval "1s" 'date +"%H:%M" ')
-(defpoll date :interval "1s" 'date +"%d.%m.%y"')
 (defpoll time-icon :interval "1s" "bash ~/.config/eww/bar/scripts/clock_rot icon")
 
-(defwidget datetime []
+(defwidget time []
         (box :class "block"
              :space-evenly false
              :spacing 10
@@ -12,9 +11,6 @@
              (image :path time-icon
                     :image-width 25
                     :image-height 25)
-	     (box :orientation "v"
 		  (label :class "bar-text"
-			 :text time)
-		  (label :class "bar-text"
-			 :text date))))
+			 :text time)))
 

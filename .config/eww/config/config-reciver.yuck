@@ -1,0 +1,3 @@
+
+(defpoll width :interval "1s" "~/.config/eww/config/config-reader --width")
+(defpoll height :interval "1s" "~/.config/eww/config/config-reader --height")

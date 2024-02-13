@@ -1,0 +1,4 @@
+#!/bin/bash
+
+curlang=`hyprctl devices | grep -B 1 "main: yes" | head -1 | grep -o ": .*" | head -c 4 | tail -c 2 | tr '[:upper:]' '[:lower:]'`
+echo "$curlang"

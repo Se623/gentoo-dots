@@ -1,0 +1,13 @@
+;; Widget, that shows real time ;;
+
+(defpoll date :interval "1s" 'date +"%a, %d of %b" ')
+
+(defwidget datetime []
+        (box :class "block"
+             :space-evenly false
+             :spacing 10
+	     :tooltip "Current date"
+             (image :class "bar-text"
+                    :text "\\ue91c")
+	     (label :class "bar-text"
+		    :text date)))

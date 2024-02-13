@@ -1,0 +1,27 @@
+#!/bin/bash
+
+. ~/.config/eww/eww.conf
+
+screen() {
+    if [[ "$auto-res" == "false" ]]; then
+	if [[ "$1" == "width" ]]; then
+	    echo "$screen-width"
+	elif [[ "$1" == "height" ]]; then
+	    echo "$screen-height"
+	fi
+    elif [[ "$autores" == "true" ]]; then
+	if [[ "$1" == "width" ]]; then
+	    echo `hyprctl monitors -j | grep "width" | grep -hEo "[[:digit:]]*"`
+	elif [[ "$1" == "height" ]]; then
+	    echo `hyprctl monitors -j | grep "height" | grep -hEo "[[:digit:]]*"`
+	fi
+    fi
+
+}
+
+if [[ "$1" == "--width" ]]; then
+    screen "width"
+elif [[ "$1" == "--height" ]]; then
+    screen "height"
+fi
+

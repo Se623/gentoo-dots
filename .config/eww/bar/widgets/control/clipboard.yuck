@@ -5,8 +5,9 @@
 
 (defwidget clipboard []
   (revealer
-   :reveal {!vol && !bat && !wifi && !tray && !blue ? true : false}
-   :transition {!vol || !bat || !wifi ? "slideleft" : "slideright"}
+   :reveal {!vol && !bat ? true : false}
+   :transition {!vol || !bat ? "slideleft" : "slideright"}
+   :duration unrev
    (eventbox
     :onhover "eww update copy=true"
     :onhoverlost "eww update copy=false"

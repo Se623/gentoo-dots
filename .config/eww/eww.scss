@@ -64,8 +64,8 @@ tooltip {
 scale trough {
   background-color: $scale;
   border-radius: 5px;
-  min-height: 10px;
-  min-width: 80px;
+  min-height: 5px;
+  min-width: 100px;
 }
 
 scale trough highlight {
@@ -81,17 +81,5 @@ scale trough highlight {
     min-height: 1.5rem;
 }
 
-menubar {
-    background-color: $block;
-    border-radius: 1rem;
-    padding: 0.75rem;
-    color: #FFFFFF;
-    font-size: 1.1rem;
-}
 
-menubar>menuitem {
-    padding: 0.5rem 1rem;
-    transition: 0.3s;
-    border-radius: 1rem;
-}
 

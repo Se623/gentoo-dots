@@ -1,9 +1,14 @@
 ;; Importing components ;;
+(defvar unrev "300ms")
+
 (include "./bar/widgets/control/control.yuck")
+(include "./bar/widgets/control-rm/control-rm.yuck")
+(include "./bar/widgets/control-static/control-static.yuck")
 (include "./bar/widgets/workspaces.yuck")
-(include "./bar/widgets/datetime.yuck")
 (include "./bar/widgets/music.yuck")
 (include "./bar/widgets/main.yuck")
+(include "./bar/widgets/time.yuck")
+(include "./bar/widgets/date.yuck")
 
 ;; Building this whole thing ;;
 
@@ -12,11 +17,15 @@
         (box :class "left" :halign "start" :hexpand false :vexpand false :space-evenly false :spacing 10
 	     (workspaces)
 	     (music)
-	     (datetime))
+	     (time)
+	     (control-rm))
         (box :class "center" :halign "start" :hexpand false :vexpand false 
-            (main))
+             (main))
         (box :class "right" :halign "end" :hexpand false :vexpand false :space-evenly false :spacing 10
-	    (control))))
+	     (control-static)
+	     (date)
+	     ;(weather)
+	     (control))))
 
 (defwindow bar
      :monitor 0
@@ -28,16 +37,3 @@
      :stacking "fg"
      :exclusive true
      (bar))
-
-(defwindow tray
-    :monitor 0
-    :stacking "overlay"
-    :geometry (geometry 
-                    :anchor "bottom left"
-                    :width "2px"
-                    :height "2px"
-                    :x "82%"
-                )
-    :namespace "eww"
-    (systray)
-)

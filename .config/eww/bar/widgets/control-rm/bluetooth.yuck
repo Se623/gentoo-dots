@@ -4,10 +4,11 @@
 
 (defwidget bluetooth []
 	   (revealer
-	    :reveal {!vol && !bat && !wifi && !copy ? true : false}
-	    :transition {!vol || !bat || !wifi ? "slideleft" : "slideright"}
+	    :reveal {!wifi ? true : false}
+	    :transition "slideleft"
+	    :duration unrev
 	    (eventbox
-	     :onhover "eww update blue=true"
+	     :onhover "eww update bat=false"
 	     :onhoverlost "eww update blue=false"
 	     :tooltip "Bluetooth connection"
 	     (box    :orientation "h"

@@ -1,0 +1,40 @@
+#!/bin/bash
+
+config="~/.config/eww/config/eww.ini"
+
+screen() {
+    if [[ `awk -F "=" '/^[^#]?auto-res/ {print $2}' ~/.config/eww/config/eww.ini | tr -d ' '` == "false" ]]; then
+	if [[ "$1" == "width" ]]; then
+	    echo `awk -F "=" '/^[^#]?width/ {print $2}' ~/.config/eww/config/eww.ini | tr -d ' '`
+	elif [[ "$1" == "height" ]]; then
+	    echo `awk -F "=" '/^[^#]?height/ {print $2}' ~/.config/eww/config/eww.ini | tr -d ' '`
+	fi
+    elif [[ `awk -F "=" '/^[^#]?auto-res/ {print $2}' ~/.config/eww/config/eww.ini | tr -d ' '` == "true" ]]; then
+	if [[ "$1" == "width" ]]; then
+	    echo `hyprctl monitors -j | grep "width" | grep -hEo "[[:digit:]]*"`
+	elif [[ "$1" == "height" ]]; then
+	    echo `hyprctl monitors -j | grep "height" | grep -hEo "[[:digit:]]*"`
+	fi
+    fi
+
+}
+
+color() {
+    if [[ "$1" == "block" ]]; then
+	echo `awk -F "=" '/^[^#]?block/ {print $2}' ~/.config/eww/config/eww.ini | tr -d ' '`
+    elif [[ "$1" == "block-db" ]]; then
+	echo `awk -F "=" '/^[^#]?block-db/ {print $2}' ~/.config/eww/config/eww.ini | tr -d ' '`
+    elif [[ "$1" == "scale" ]]; then
+	echo `awk -F "=" '/^[^#]?scale/ {print $2}' ~/.config/eww/config/eww.ini | tr -d ' '`
+    elif [[ "$1" == "icon" ]]; then
+	if [[ `awk -F "=" '/^[^#]?monocolor/ {print $2}' ~/.config/eww/config/eww.ini | tr -d ' '` == "true" ]]; then
+	    echo `awk -F "=" '/^[^#]?icon-color/ {print $2}' ~/.config/eww/config/eww.ini | tr -d ' '`
+	elif [[ `awk -F "=" '/^[^#]?monocolor/ {print $2}' ~/.config/eww/config/eww.ini | tr -d ' '` == "false" ]]; then
+	    
+}
+
+if [[ "$1" == "--width" ]]; then
+    screen "width"
+elif [[ "$1" == "--height" ]]; then
+    screen "height"
+fi

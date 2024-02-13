@@ -7,10 +7,11 @@
 
 (defwidget volume []
   (revealer
-   :reveal {!bat && !copy && !wifi && !tray && !blue ? true : false}
+   :reveal {!bat && !copy ? true : false}
    :transition {!bat || wifi || copy ? "slideleft" : "slideright"}
+   :duration unrev
    (eventbox
-    :onhover "eww update vol=true"                
+    :onhover "eww update vol=true"
     :onhoverlost "eww update vol=false"
     :tooltip "Volume: ${current-volume}%"
     (box    :orientation "h"        

@@ -1,0 +1,104 @@
+#!/bin/bash
+
+## Weather data
+KEY="68ea3abc12d066d0feb2213dd51afa7d"
+LAT="55.6376203"
+LON="37.5924211"
+# CITY_ID=""
+UNIT="metric"	# Available options : 'metric' or 'imperial'
+
+## Get data
+## https://api.openweathermap.org/data/2.5/weather?lat=55.6376203&lon=37.5924211&appid=68ea3abc12d066d0feb2213dd51afa7d&units=metric
+weather=`curl -sf "https://api.openweathermap.org/data/2.5/weather?lat="$LAT"&lon="$LON"&appid="$KEY"&units="$UNIT""`
+
+
+if [ ! -z "$weather" ]; then
+    weather_temp=`echo "$weather" | jq ".main.temp" | cut -d "." -f 1`
+    weather_icon_code=`echo "$weather" | jq -r ".weather[].icon" | head -1`
+    weather_description=`echo "$weather" | jq -r ".weather[].description" | head -1 | sed -e "s/\b\(.\)/\u\1/g"`
+    
+    #Big long if statement of doom
+    if [ "$weather_icon_code" == "50d"  ]; then
+	weather_icon="\\ue915 "
+	weather_hex="#84afdb"
+    elif [ "$weather_icon_code" == "50n"  ]; then
+	weather_icon="\\ue915 "
+	weather_hex="#84afdb"
+    elif [ "$weather_icon_code" == "01d"  ]; then
+	weather_icon="\\ue90f "
+	weather_hex="#ffd86b"
+    elif [ "$weather_icon_code" == "01n"  ]; then
+	weather_icon="\\ue910 "
+	weather_hex="#fcdcf6"
+    elif [ "$weather_icon_code" == "02d"  ]; then
+	weather_icon="\\ue920 "
+	weather_hex="#adadff"
+    elif [ "$weather_icon_code" == "02n"  ]; then
+	weather_icon="\\ue920 "
+	weather_hex="#adadff"
+    elif [ "$weather_icon_code" == "03d"  ]; then
+	weather_icon="\\ue91d "
+	weather_hex="#adadff"
+    elif [ "$weather_icon_code" == "03n"  ]; then
+	weather_icon="\\ue91d "
+	weather_hex="#adadff"
+    elif [ "$weather_icon_code" == "04d"  ]; then
+	weather_icon="\\ue91e "
+	weather_hex="#adadff"
+    elif [ "$weather_icon_code" == "04n"  ]; then
+	weather_icon="\\u91e "
+	weather_hex="#adadff"
+    elif [ "$weather_icon_code" == "09d"  ]; then
+	weather_icon="\\u922 "
+	weather_hex="#6b95ff"
+    elif [ "$weather_icon_code" == "09n"  ]; then
+	weather_icon="\\u922 "
+	weather_hex="#6b95ff"
+    elif [ "$weather_icon_code" == "10d"  ]; then
+	weather_icon="\\ue923 "
+	weather_hex="#6b95ff"
+    elif [ "$weather_icon_code" == "10n"  ]; then
+	weather_icon="\\ue924 "
+	weather_hex="#6b95ff"
+    elif [ "$weather_icon_code" == "11d"  ]; then
+	weather_icon="\\ue926 "
+	weather_hex="#ffeb57"
+    elif [ "$weather_icon_code" == "11n"  ]; then
+	weather_icon="\\ue926 "
+	weather_hex="#ffeb57"
+    elif [ "$weather_icon_code" == "13d"  ]; then
+	weather_icon="\\ue925 "
+	weather_hex="#e3e6fc"
+    elif [ "$weather_icon_code" == "13n"  ]; then
+	weather_icon="\\ue925 "
+	weather_hex="#e3e6fc"
+    elif [ "$weather_icon_code" == "40d"  ]; then
+	weather_icon="\\ue921 "
+	weather_hex="#84afdb"
+    elif [ "$weather_icon_code" == "40n"  ]; then
+	weather_icon="\\ue921 "
+	weather_hex="#84afdb"
+    else 
+	weather_icon=" "
+	weather_hex="#adadff"
+    fi
+else
+    weather_description="Weather Unavailable"
+    weather_icon=" "
+    weather_temp="-"
+    weather_hex="#adadff"
+fi
+
+
+## Execute
+if [[ "$1" == "--getdata" ]]; then
+	get_weather_data
+elif [[ "$1" == "--icon" ]]; then
+	echo "$weather_icon"
+elif [[ "$1" == "--temp" ]]; then
+	echo "$weather_temp""°C" 
+elif [[ "$1" == "--hex" ]]; then
+	echo "$weather_hex"
+elif [[ "$1" == "--stat" ]]; then
+	echo "$weather_description"
+fi

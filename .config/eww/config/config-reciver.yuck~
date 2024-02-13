@@ -1,0 +1,3 @@
+
+(defpoll width :interval "1s" "~/.config/eww/dashboard/scripts/config_view --width")
+(defpoll height :interval "1s" "~/.config/eww/dashboard/scripts/config_view --height")
