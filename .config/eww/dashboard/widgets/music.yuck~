@@ -1,0 +1,23 @@
+;; Music widget ;;
+
+(defpoll cover :interval "1s" "~/.config/eww/dashboard/scripts/music --cover")
+
+(defwidget music []
+	   (box :orientation "v"
+		:space-evenly "false"
+		(box :orientation "v"
+		     :class "block db"
+		     :space-evenly "false"
+		     :spacing 30
+		     (image :class ""
+			    :image-width 100
+			    :image-height 100
+			    :path cover)
+		     (scale)
+		     (box :orientation "h"
+			  (button
+			   (label))
+			  (button
+			   (label))
+			  (button
+			   (label))))))

@@ -1,2 +1,18 @@
 #!/bin/bash
 
+path="./colors.scss"
+
+scssify() {
+    color=`./config-reader --color $1`
+
+    colorarr=(${a:0:2} ${a:2:2} ${a:4:2} ${a:6:2})
+
+}
+
+block=`./config-reader --color block`
+block_db=`./config-reader --color block-db`
+scale=`./config-reader --color scale`
+
+sed -i "s/block: .*/block: #$block;/g" $path
+sed -i "s/block-db: .*/block-db: #$block_db;/g" $path
+sed -i "s/scale: .*/scale: #$scale;/g" $path

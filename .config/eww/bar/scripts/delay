@@ -1,0 +1,33 @@
+#!/bin/bash
+
+button_delay=0.9
+
+button_delay_set() {
+    $(sleep $button_delay; ~/.config/eww/bar/scripts/delay --rem "$1" succes)&
+    echo "$1-$!" >> ~/.cache/bar_button_delays
+    echo "Timer $1 set for $button_delay seconds"
+}
+
+button_delay_rem() {
+    for i in `cat ~/.cache/bar_button_delays | tr '\n' ' '`
+    do
+	if [[ -n $(echo "$i" | grep $1) ]]; then 
+	    kill `echo $i | tr '-' ' ' | awk '{ print $2 }'`
+	    if [[ "$2" == "succes" ]]; then
+		eww update `echo $i | tr '-' ' ' | awk '{ print $1 }'`=true
+		sed -i "/$1/d" ~/.cache/bar_button_delays
+		echo "Timer ended succesful"
+	    elif [[ "$2" == "decline" ]]; then
+		sed -i "/$1/d" ~/.cache/bar_button_delays
+		echo "Timer canceled"
+	    fi
+	fi
+    done
+}
+
+
+if [[ "$1" == "--set" ]]; then
+    button_delay_set "$2"
+elif [[ "$1" == "--rem" ]]; then
+    button_delay_rem "$2" "$3"
+fi

@@ -32,11 +32,11 @@ get_icon() {
 	fi
     elif [ "$1" == "b" ]; then
 	if [[ -n $(echo "$connect" | grep 'Wired') ]]; then
-	    echo "\\u00"
+	    echo ""
 	elif [ "$power" == "" ]; then
-	    echo "\\u00"
+	    echo ""
 	elif [ "$power" -gt "66" ]; then
-            echo "\\u00"
+            echo ""
 	elif [ "$power" -gt "33" ]; then
        	    echo "\\ue90c"
 	elif [ "$power" -ge "0" ]; then

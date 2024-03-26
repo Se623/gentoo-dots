@@ -21,5 +21,4 @@
 			  (label :class ""
 				 :text name))
 		     (label :class ""
-			    :text "Uptime: {`uptime -p | sed 's/up/Uptime:/1'`}"))
-		(box :height 400)))
+			    :text "Uptime: {`uptime -p | sed 's/up/Uptime:/1'`}"))))

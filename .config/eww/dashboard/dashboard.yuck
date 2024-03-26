@@ -1,6 +1,7 @@
 (include "./dashboard/widgets/user.yuck")
 (include "./dashboard/widgets/stats.yuck")
 (include "./dashboard/widgets/power.yuck")
+(include "./dashboard/widgets/music.yuck")
 (include "./dashboard/widgets/weather.yuck")
 
 (defvar dashrev false)
@@ -16,15 +17,17 @@
 				    :space-evenly "false"
 				(box :class "block"
 				     :height {height*0.75}
-				     (centerbox :valign "center"
-						:halign "center"
-						:height {height*0.6}
-						:width {width*0.6}
-						:orientation "v"
-						(box
-						 (user))
-						(box)
-						(box)))
+				     (centerbox :valign "fill"
+						:halign "fill"
+						:style "padding: 2rem;"
+						:height "90%"
+						:width "90%"
+						(box :class "left"
+						     :orientation "v"
+						     (user)
+						     (music-db))
+						(box :class "center")
+						(box :class "right")))
 				(box :height {height*0.2}))))))
 
 (defwindow dashboard
