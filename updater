@@ -6,4 +6,4 @@ cp -rT ~/gentoo-dots/.local ~/.local/
 cp -rT ~/gentoo-dots/Wallpapers ~/Wallpapers/
 cp -rT ~/gentoo-dots/Music ~/Music
 #cp -rT ./sddm-theme /usr/share/sddm/themes/sddm-theme/
-eww open-many bar dashboard user
+eww open-many bar dashboard
