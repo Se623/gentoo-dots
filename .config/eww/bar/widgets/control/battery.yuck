@@ -1,7 +1,7 @@
 ;; Battery Widget ;;
 
-(defpoll battery :interval "1s" "~/.config/eww/bar/scripts/battery icon")
-(defpoll battery-cappacity :interval "1s"  "~/.config/eww/bar/scripts/battery percent")
+(defpoll battery :interval "1m" "~/.config/eww/bar/scripts/battery icon")
+(defpoll battery-cappacity :interval "1m"  "~/.config/eww/bar/scripts/battery percent")
 (defvar	bat false)
 
 (defwidget battery []
@@ -21,7 +21,7 @@
                     :tooltip "Battery: ${battery-cappacity}%")
             (revealer  :transition "slideright"
                        :reveal bat
-                       :duration "550ms"
+                       :duration rev
                        (scale :class ""
 			      :active false
                               :min 0

@@ -14,7 +14,7 @@
 	(box    :orientation "h"
 		:space-evenly "false"
 		:spacing "2"
-		(image  :path music
+		(image  :path {matches(music, "false") ? "./icons/music/you_shouldnt_see_this.png" : music}
 			:visible {matches(music, "false") ? "false" : "true"}
 			:image-width 25
 			:image-height 25)
@@ -23,7 +23,7 @@
 		       :text "\\ue91d")
 		(revealer  :transition "slideright"
 			   :reveal mus
-			   :duration "550ms"
+			   :duration rev
                            (label :class "bar-text"
 				  :limit-width 20
 				  :text song))))))

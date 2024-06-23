@@ -26,7 +26,7 @@
 			:text volume-b))
             (revealer  :transition "slideright"
                        :reveal vol
-                       :duration "550ms"
+                       :duration rev
                        (scale :class "volbar"       
                               :value current-volume
                               :orientation "h"

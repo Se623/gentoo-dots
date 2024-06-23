@@ -1,5 +1,5 @@
 
-(defpoll dev :interval "1s" "~/.config/eww/bar/scripts/bluetooth --dev") 
+(defpoll dev :interval "10s" "~/.config/eww/bar/scripts/bluetooth --dev") 
 (defvar blue false)
 
 (defwidget bluetooth []
@@ -8,7 +8,7 @@
 	    :transition "slideleft"
 	    :duration unrev
 	    (eventbox
-	     :onhover "eww update bat=false"
+	     :onhover "eww update blue=true"
 	     :onhoverlost "eww update blue=false"
 	     :tooltip "Bluetooth connection"
 	     (box    :orientation "h"
@@ -18,7 +18,7 @@
 			    :text "\\ue91c")
 		     (revealer  :transition "slideright"
 				:reveal blue
-				:duration "550ms"
+				:duration rev
 				(label :class "bar-text"
 				       :limit-width 20
 				       :width 150

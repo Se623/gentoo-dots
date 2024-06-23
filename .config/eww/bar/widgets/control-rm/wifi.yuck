@@ -1,17 +1,17 @@
 ;; Wifi widget ;;
 
-(defpoll wifi-a :interval "1s" "~/.config/eww/bar/scripts/wifi --icon-a")
-(defpoll wifi-b :interval "1s" "~/.config/eww/bar/scripts/wifi --icon-b")
-(defpoll type :interval "1s" "~/.config/eww/bar/scripts/wifi --type")
+(defpoll wifi-a :interval "5s" "~/.config/eww/bar/scripts/wifi --icon-a")
+(defpoll wifi-b :interval "5s" "~/.config/eww/bar/scripts/wifi --icon-b")
+(defpoll type :interval "5s" "~/.config/eww/bar/scripts/wifi --type")
 (defvar wifi false)
 
 (defwidget wifi []
   (revealer
    :reveal {!blue ? true : false}
-   :transition "slideright"
+   :transition "slideright" 
    :duration unrev
    (eventbox
-    :onhover "~/.config/eww/bar/scripts/delay --set wifi"
+    :onhover "eww update wifi=true"
     :onhoverlost "eww update wifi=false"
     :tooltip "Internet connection"
     (box    :orientation "h"        
@@ -26,7 +26,7 @@
 			:text wifi-b))
 	    (revealer  :transition "slideright"
                        :reveal wifi
-                       :duration "550ms"
+                       :duration rev
 		       (label :class "bar-text"
 			      :width 150
 			      :text type))))))

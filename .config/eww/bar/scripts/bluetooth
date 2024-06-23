@@ -13,5 +13,6 @@ get_bluedev() {
 
 
 if [ "$1" == "--dev" ]; then
-    get_bluedev
+    #get_bluedev
+    echo "fix the script >:("
 fi

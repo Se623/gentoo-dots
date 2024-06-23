@@ -1,5 +1,6 @@
 ;; Importing components ;;
-(defvar unrev "300ms")
+(defvar rev "200ms")
+(defvar unrev "200ms")
 
 (include "./bar/widgets/control/control.yuck")
 (include "./bar/widgets/control-rm/control-rm.yuck")
@@ -19,7 +20,7 @@
 	     (music)
 	     (time)
 	     (control-rm))
-        (box :class "center" :halign "start" :hexpand false :vexpand false 
+        (box :class "center" :halign "center" :hexpand false :vexpand false 
              (main))
         (box :class "right" :halign "end" :hexpand false :vexpand false :space-evenly false :spacing 10
 	     (control-static)

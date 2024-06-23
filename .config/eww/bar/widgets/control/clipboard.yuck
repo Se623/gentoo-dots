@@ -1,6 +1,6 @@
 ;; Clipboard widget ;;
 
-(defpoll selected :interval "1s" "~/.config/eww/bar/scripts/clipboard --selected") 
+(defpoll selected :interval "3s" "~/.config/eww/bar/scripts/clipboard --selected") 
 (defvar copy false)
 
 (defwidget clipboard []
@@ -19,7 +19,7 @@
 		   :text "\\ue91e")
             (revealer  :transition "slideright"
                        :reveal copy
-                       :duration "550ms"
+                       :duration rev
                        (label :class "bar-text"
 			      :limit-width 20
 			      :width 150
