@@ -1,36 +1,16 @@
-(defwidget logout [] 
-  (box :class "module" :vexpand "false" :hexpand "false" 
-       (button :onclick "dashboard-exec | hyprctl dispatch exit" 
-	       (label :class "icon" :text "\\ue927"))))
-(defwidget sleep [] 
-  (box :class "module" :vexpand "false" :hexpand "false" 
-       (button :onclick "dashboard-exec | loginctl suspend" 
-	       (label :class "icon" :text "\\ue92a"))))
-(defwidget reboot [] 
-  (box :class "module" :vexpand "false" :hexpand "false" 
-       (button :onclick "dashboard-exec | loginctl reboot" 
-	       (label :class "icon" :text "\\ue929"))))
-(defwidget poweroff [] 
-  (box :class "module" :vexpand "false" :hexpand "false" 
-       (button :onclick "dashboard-exec | loginctl poweroff" 
-	       (label :class "icon" :text "\\ue928"))))
-
-;; logout
-(defwindow logout :stacking "overlay" :monitor 0 
-  :geometry (geometry :x 1445 :y 150 :width 155 :height 155)
-					(logout))
-
-;; sleep
-(defwindow sleep :stacking "overlay" :monitor 0 
-  :geometry (geometry :x 1615 :y 150 :width 155 :height 155)
-  (sleep))
-
-;; reboot
-(defwindow reboot :stacking "overlay" :monitor 0 
-  :geometry (geometry :x 1445 :y 320 :width 155 :height 155)
-  (reboot))
-
-;; poweroff
-(defwindow poweroff :stacking "overlay" :monitor 0 
-  :geometry (geometry :x 1615 :y 320 :width 155 :height 155)
-  (poweroff))
+(defwidget power-menu []
+	   (box :orientation "h" :class "block-db" :style "min-height: ${width * 0.12}px;"
+	    (box :orientation "v" 
+	     (box 
+		  (button :onclick "dashboard-exec | hyprctl dispatch exit" 
+			  (label :class "icon db-icon" :text "\\ue927")))
+	     (box   
+		  (button :onclick "dashboard-exec | loginctl suspend" 
+			  (label :class "icon db-icon" :text "\\ue92a"))))
+	    (box :orientation "v" 
+	     (box  
+		  (button :onclick "dashboard-exec | loginctl reboot" 
+			  (label :class "icon db-icon" :text "\\ue929")))
+	     (box   
+		  (button :onclick "dashboard-exec | loginctl poweroff" 
+			  (label :class "icon db-icon" :text "\\ue928"))))))

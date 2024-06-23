@@ -6,18 +6,18 @@
 	   (box :orientation "v"
 		:space-evenly "false"
 		(box :orientation "v"
-		     :class "block db"
+		     :class "block-db"
 		     :space-evenly "false"
 		     :spacing 30
 		     (image :class ""
 			    :image-width 100
 			    :image-height 100
-			    :path cover)
+			    :path "")
 		     (scale)
 		     (box :orientation "h"
 			  (button
-			   (label))
+			   (label :text "⏮"))
 			  (button
-			   (label))
+			   (label :text "▶"))
 			  (button
-			   (label))))))
+			   (label :text "⏭"))))))

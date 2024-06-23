@@ -47,16 +47,28 @@ tooltip {
     font-size: 1.5rem
 }
 
+.db-icon {
+    font-size: 2rem
+}
+
 // Block config
 
 .block {
     background-color: $block;
     border-radius: 1em;
     padding: 0.2rem 1rem 0.2rem 1rem;
-    .db {
-	background: $block-db;
-    }
 }
+.block-db {
+    background: $block-db;
+    border-radius: 1em;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+}
+.block-db-back {
+    background: $block-db-back;
+    border-radius: 1em;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+}
+    
 
 
 // Scale config
